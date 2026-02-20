@@ -1,0 +1,95 @@
+# 📊 Budget Manager — Application Local-First
+
+## 🎯 Objectif
+
+Concevoir et livrer une application de gestion budgétaire locale
+centrée sur la gestion structurée de l’état, la persistance des données
+et une exécution native Linux.
+
+Ce projet a servi de :
+
+- Validation de workflows de développement assisté par IA
+- Terrain d’expérimentation sur l’architecture d’état UI
+- Exercice de packaging et distribution Linux
+
+---
+
+## 🏗 Vue d’Architecture
+
+Couche Frontend :
+- Interface Streamlit
+- Gestion structurée du session state
+- Patterns d’initialisation défensive
+
+Couche Persistance :
+- Stockage local basé sur JSON
+- Segmentation mensuelle des données
+- Structure prête pour évolution versionnée
+
+Environnement d’exécution :
+- Isolation via environnement virtuel Python
+- Runtime Streamlit
+- Déploiement local Linux
+
+---
+
+## 🧠 Défis Techniques
+
+- Stabilisation de `st.session_state`
+- Prévention des erreurs liées aux états nuls
+- Structuration du stockage JSON persistant
+- Préparation d’une future migration vers base de données
+
+---
+
+## 🛠 Stratégie de Déploiement
+
+Conçue pour :
+
+- Exécution locale
+- Isolation par environnement virtuel
+- Distribution Linux
+- Packaging potentiel en AppImage
+
+Flux utilisateur :
+
+1. Activation de l’environnement virtuel
+2. Lancement du serveur Streamlit
+3. Accès via navigateur local
+4. Persistance structurée des données
+
+---
+
+## 🤖 Développement Assisté par IA
+
+Approche incluant :
+
+- Génération itérative de code
+- Boucles de validation structurées
+- Cycles de refactoring
+- Simulation d’erreurs & correction
+- Nettoyage progressif de l’architecture
+
+L’IA a été utilisée comme :
+
+- Accélérateur
+- Relecteur technique
+- Assistant de refactoring
+- Simulateur de cas limites
+
+---
+
+## 📈 Ce que cela démontre
+
+- Livraison produit concrète
+- Approche local-first
+- Conscience des contraintes de déploiement
+- Méthodologie de debug structurée
+- Orchestration IA contrôlée
+
+---
+
+## 🔐 Code Source
+
+Version démonstration publique disponible.
+Version complète structurée accessible sur demande.
