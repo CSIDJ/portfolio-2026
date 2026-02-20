@@ -1,89 +1,82 @@
-# 👨‍💻 CSIDJ  
-### AI-Oriented Software Developer | Product-Focused Engineer
+# 👨‍💻 Dominique Joguin  
+### AI-Orchestrated Program Director | Product & Governance Architect
+
 🇫🇷 [Version française](README.fr.md)
 
 ---
 
-## 🧠 About Me
+## 🧠 Profile
 
-I design and ship structured, production-ready applications with a strong
-focus on architecture, clarity, and AI-assisted development workflows.
+Senior program and transformation leader with 20+ years of experience in governance, enterprise architecture and business unit management.
 
-My work combines:
+Currently focused on AI-assisted product engineering and structured LLM orchestration applied to real-world software systems.
 
-- Rapid prototyping
-- Clean system architecture
-- Local-first product thinking
-- AI orchestration & validation loops
-- Linux packaging & deployment readiness
+My work bridges:
+
+- Program governance
+- Multi-tenant SaaS architecture
+- AI-driven development orchestration
+- Enterprise-level security & scalability
+- Product strategy and structured delivery
 
 ---
 
-# 🚀 Selected Projects
+# 🚀 Featured Projects
 
-## 📊 Budget Manager  
-Local-first budgeting application built with Streamlit.  
-Robust state management, structured persistence layer, and distribution-ready architecture.
+## 🚀 Multi-Tenant SaaS Platform (AI-Orchestrated)
+
+Design and structuring of a modular, scalable SaaS platform built from scratch using AI-assisted orchestration across the entire lifecycle.
+
+👉 [View Case Study](projects/saas-platform.md)
+
+---
+
+## 📊 Budget Manager Application
+
+Local-first budgeting application built with structured state management and Linux-ready distribution.
 
 👉 [View Case Study](projects/budget-manager.md)
 
 ---
 
-## 🎬 Video Scanner  
-Automation tool for video metadata extraction and workflow orchestration.
+## 🎬 Video Automation Tool
+
+Automation-based application integrating AI workflows and structured validation loops.
 
 👉 [View Case Study](projects/video-scanner.md)
 
 ---
 
-# 🏗 Engineering Philosophy
-
-I focus on:
+# 🏗 Engineering & Governance Philosophy
 
 - Architecture before scale
-- Clean separation of concerns
-- Defensive initialization
-- Deployment awareness from day one
-- Maintainability over quick hacks
-
-AI is used as an accelerator — not as a replacement for engineering judgment.
+- Governance embedded in product design
+- Sequential validation cycles
+- Defensive system structuring
+- AI as accelerator, not replacement
 
 ---
 
-# 🤖 AI-Orchestrated Development
+# 🤖 AI-Orchestration Approach
 
-My workflow includes:
+Projects are developed using structured LLM role simulation:
 
-1. Structured planning
-2. Modular generation
-3. Critical validation passes
-4. Refactoring cycles
-5. Documentation consolidation
+- Product strategy agent
+- Architecture agent
+- Security review agent
+- DevOps simulation
+- QA validation loop
 
-This ensures:
-- Reduced hallucination risks
-- Architectural coherence
-- Production-level consistency
+This reduces hallucination risk and improves architectural coherence.
 
 ---
 
-# 📦 Deployment Strategy
+# 🔐 Source Code Access
 
-All projects are designed to support:
+Some repositories expose architectural documentation publicly.
 
-- Local execution
-- Virtual environment isolation
-- Linux packaging (AppImage-ready)
-- Containerization (Docker-ready)
-- Future cloud deployment
-
----
-
-# 🔐 Full Source Code Access
-
-Some repositories expose architectural documentation publicly.  
-Core business logic is not fully public.
+Core orchestration frameworks and internal structuring logic are not fully disclosed.
 
 Full access available upon professional request.
 
-📧 Contact: dominique.joguin@outlook.com
+📧 dominique.joguin@outlook.com
