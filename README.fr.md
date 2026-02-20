@@ -1,5 +1,6 @@
 # 👨‍💻 CSIDJ  
 ### Développeur orienté IA | Ingénierie produit
+🇬🇧 [English version](README.md)
 
 ---
 
