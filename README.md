@@ -1,5 +1,6 @@
 # 👨‍💻 CSIDJ  
 ### AI-Oriented Software Developer | Product-Focused Engineer
+🇫🇷 [Version française](README.fr.md)
 
 ---
 
