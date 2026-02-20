@@ -1,7 +1,7 @@
 # 👨‍💻 Dominique Joguin  
 ### Directeur de Programme orienté IA | Architecte Produit & Gouvernance
 
-🇬🇧 [English version](README.md)
+🇬🇧 [English version](README.uk.md)
 
 ---
 
