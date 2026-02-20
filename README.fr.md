@@ -1,55 +1,62 @@
-# 👨‍💻 CSIDJ  
-### Développeur orienté IA | Ingénierie produit
+# 👨‍💻 Dominique Joguin  
+### Directeur de Programme orienté IA | Architecte Produit & Gouvernance
+
 🇬🇧 [English version](README.md)
 
 ---
 
 ## 🧠 Profil
 
-Je conçois et déploie des applications structurées,
-prêtes pour la production, avec une forte attention portée :
+Manager et directeur de programme avec plus de 20 ans d’expérience en gouvernance, architecture d’entreprise et pilotage de Business Units.
 
-- à l’architecture logicielle
-- à la maintenabilité
-- à l’orchestration d’agents IA
-- à la distribution Linux
-- à une approche "local-first"
+Orientation actuelle :
+
+Intégration des IA génératives dans des projets structurés, conception SaaS multi-tenant et orchestration d’agents LLM sur l’ensemble du cycle de vie produit.
 
 ---
 
-# 🚀 Projets Sélectionnés
+# 🚀 Projets Majeurs
 
-## 📊 Budget Manager  
-Application locale de gestion budgétaire développée avec Streamlit.  
-Gestion d’état robuste, persistance structurée et préparation à la distribution.
+## 🚀 Plateforme SaaS Multi-Tenant (Orchestration IA)
 
-👉 [Voir l’étude de cas](projects/budget-manager.fr.md)
+Conception et structuration complète d’une plateforme SaaS modulaire et scalable, pilotée par une orchestration IA simulant les rôles d’une organisation projet.
 
----
-
-## 🎬 Video Scanner  
-Outil d’automatisation pour l’analyse et l’extraction de métadonnées vidéo.
-
-👉 [Voir l’étude de cas](projects/video-scanner.fr.md)
+👉 [Voir l’étude de cas](projects/saas-platform.md)
 
 ---
 
-# 🏗 Philosophie d’ingénierie
+## 📊 Application Budget Manager
+
+Application locale de gestion budgétaire avec structuration d’état robuste et distribution Linux.
+
+👉 [Voir l’étude de cas](projects/budget-manager.md)
+
+---
+
+## 🎬 Outil d’Automatisation Vidéo
+
+Application d’automatisation intégrant des workflows IA et des cycles de validation structurés.
+
+👉 [Voir l’étude de cas](projects/video-scanner.md)
+
+---
+
+# 🏗 Philosophie Produit & Gouvernance
 
 - Architecture avant scalabilité
-- Séparation claire des responsabilités
-- Initialisation défensive
-- Anticipation du déploiement
-- Maintenabilité prioritaire
-
-L’IA est utilisée comme accélérateur, jamais comme substitut au jugement technique.
+- Gouvernance intégrée dès la conception
+- Validation séquentielle des phases
+- Structuration défensive des systèmes
+- IA comme levier stratégique
 
 ---
 
-# 🔐 Accès au code complet
+# 🔐 Accès au code
 
-Certaines parties des projets sont publiques à des fins de démonstration.
+Certaines documentations d’architecture sont publiques.
 
-Le code complet est accessible sur demande (recruteurs / entreprises).
+Le cœur des mécanismes d’orchestration IA n’est pas exposé publiquement.
 
-📧 Contact : dominique.joguin@outlook.com
+Accès possible sur demande professionnelle.
+
+📧 dominique.joguin@outlook.com
