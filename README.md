@@ -27,7 +27,7 @@ My work bridges:
 
 Design and structuring of a modular, scalable SaaS platform built from scratch using AI-assisted orchestration across the entire lifecycle.
 
-👉 [View Case Study](projects/saas-platform.md)
+🔎 **Read Full Case Study →** [SaaS Platform](projects/saas-platform.md)
 
 ---
 
@@ -35,7 +35,7 @@ Design and structuring of a modular, scalable SaaS platform built from scratch u
 
 Local-first budgeting application built with structured state management and Linux-ready distribution.
 
-👉 [View Case Study](projects/budget-manager.md)
+🔎 **Read Full Case Study →** [Budget Manager](projects/budget-manager.md)
 
 ---
 
@@ -43,7 +43,7 @@ Local-first budgeting application built with structured state management and Lin
 
 Automation-based application integrating AI workflows and structured validation loops.
 
-👉 [View Case Study](projects/video-scanner.md)
+🔎 **Read Full Case Study →** [Video Automation Tool](projects/video-scanner.md)
 
 ---
 
