@@ -3,70 +3,105 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portfolio 2026 — Dominique Joguin</title>
+  <title>Dominique Joguin — Portfolio</title>
 
   <style>
+    :root {
+      --border: #e5e7eb;
+      --text: #111827;
+      --muted: #374151;
+    }
+
     body {
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
       margin: 0;
-      line-height: 1.6;
+      color: var(--text);
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     header {
-      padding: 32px 20px;
-      border-bottom: 1px solid #e5e7eb;
-    }
-
-    main {
-      max-width: 900px;
-      padding: 24px 20px 60px;
-      margin: 0 auto;
+      padding: 40px 20px 20px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
     }
 
     h1 {
       margin: 0;
-      font-size: 32px;
+      font-size: 34px;
     }
 
     .tagline {
-      margin: 4px 0 0 0;
-      color: #374151;
+      margin-top: 8px;
       font-weight: 600;
+      color: var(--muted);
+    }
+
+    .hero {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .circles {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .circle {
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      background: #fff;
+    }
+
+    .circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .circle.logo img {
+      object-fit: contain;
+      padding: 36px;
+      box-sizing: border-box;
+    }
+
+    nav {
+      padding: 20px;
+      border-top: 1px solid var(--border);
+      text-align: center;
     }
 
     nav a {
-      margin-right: 14px;
+      margin: 0 12px;
       text-decoration: none;
-      font-size: 14px;
-    }
-
-    section {
-      margin-top: 40px;
-    }
-
-    .card {
-      border: 1px solid #e5e7eb;
-      border-radius: 12px;
-      padding: 18px;
-      margin: 18px 0;
-    }
-
-    .card h3 {
-      margin: 0 0 8px 0;
-    }
-
-    .card a {
-      display: inline-block;
-      margin-top: 10px;
-      text-decoration: none;
+      font-size: 15px;
+      color: #1f2937;
       font-weight: 500;
     }
 
+    nav a:hover {
+      text-decoration: underline;
+    }
+
     footer {
-      border-top: 1px solid #e5e7eb;
-      padding: 16px 20px;
+      text-align: center;
+      padding: 14px;
+      font-size: 13px;
       color: #6b7280;
-      font-size: 14px;
+      border-top: 1px solid var(--border);
     }
   </style>
 </head>
@@ -74,91 +109,33 @@
 <body>
 
   <header>
-    <main style="padding:0;">
-
-      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
-
-        <div>
-          <h1>Dominique Joguin</h1>
-          <p class="tagline">
-            Directeur de Programme augmenté par l’IA | Architecte Produit & Gouvernance
-          </p>
-        </div>
-
-        <nav>
-          <a href="./index.html">🇫🇷 Français</a>
-          <a href="./en.html">🇬🇧 English</a>
-          <a href="./projects/index-fr.md">📚 Études de cas</a>
-          <a href="./docs/CV-Joguin_D.pdf" target="_blank">📄 CV</a>
-          <a href="./docs/DCS-Joguin_D.pdf" target="_blank">🧾 DCS</a>
-          <a href="https://www.linkedin.com/in/csidominiquejoguin/" target="_blank">💼 LinkedIn</a>
-          <a href="https://github.com/CSIDJ" target="_blank">🧑‍💻 GitHub</a>
-        </nav>
-
-      </div>
-
-    </main>
+    <h1>Dominique Joguin</h1>
+    <p class="tagline">
+      Directeur de Programme augmenté par l’IA | Architecte Produit & Gouvernance
+    </p>
   </header>
 
-  <main>
-
-    <section>
-      <h2>Profil</h2>
-      <p>
-        Manager et directeur de programme avec plus de 20 ans d’expérience en gouvernance,
-        architecture d’entreprise et pilotage de transformations.
-        Orientation actuelle : IA générative, orchestration d’agents LLM,
-        conception SaaS multi-tenant et livraison structurée augmentée par l’IA.
-      </p>
-    </section>
-
-    <section>
-      <h2>Projets majeurs</h2>
-
-      <div class="card">
-        <h3>🚀 Plateforme SaaS Multi-Tenant (Orchestration IA)</h3>
-        <p>
-          Conception et structuration complète d’une plateforme SaaS modulaire et scalable,
-          pilotée par une orchestration IA simulant les rôles d’une organisation projet.
-        </p>
-        <a href="./projects/saas-platform-fr.md">Lire l’étude de cas →</a>
+  <main class="hero">
+    <div class="circles">
+      <div class="circle logo">
+        <img src="./assets/images/logo-dj.png" alt="Logo DJ">
       </div>
 
-      <div class="card">
-        <h3>📊 Budget Manager</h3>
-        <p>
-          Application local-first de gestion budgétaire (Streamlit)
-          avec persistance, structuration d’état robuste et stratégie de distribution Linux.
-        </p>
-        <a href="./projects/budget-manager-fr.md">Lire l’étude de cas →</a>
+      <div class="circle">
+        <img src="./assets/images/portrait.png" alt="Dominique Joguin">
       </div>
-
-      <div class="card">
-        <h3>🎬 Outil d’Automatisation Vidéo</h3>
-        <p>
-          Outil Python GUI orienté workflow intégrant validation structurée,
-          debug maîtrisé et compatibilité Linux.
-        </p>
-        <a href="./projects/video-scanner-fr.md">Lire l’étude de cas →</a>
-      </div>
-
-      <div class="card">
-        <h3>🤖 Framework d’Orchestration IA</h3>
-        <p>
-          Modèle d’orchestration multi-rôles permettant des boucles de validation
-          et une livraison structurée de projets complexes.
-        </p>
-        <a href="./projects/ai-orchestration-framework-fr.md">Lire l’étude de cas →</a>
-      </div>
-
-    </section>
-
+    </div>
   </main>
 
+  <nav>
+    <a href="./fr.html">🇫🇷 Français</a>
+    <a href="./en.html">🇬🇧 English</a>
+    <a href="./docs/CV-Joguin_D.pdf" target="_blank">📄 CV</a>
+    <a href="https://www.linkedin.com/in/csidominiquejoguin/" target="_blank">💼 LinkedIn</a>
+  </nav>
+
   <footer>
-    <main style="padding:0;">
-      © Dominique Joguin — Portfolio 2026
-    </main>
+    © Dominique Joguin — 2026 | ver.21-02_10-38
   </footer>
 
 </body>
