@@ -72,10 +72,12 @@
       object-fit: cover;
     }
 
-    .circle.logo img {
+    /* Médaillon : on veut le voir en entier */
+    .circle.medallion img {
       object-fit: contain;
-      padding: 36px;
+      padding: 0;
       box-sizing: border-box;
+      background: #fff;
     }
 
     nav {
@@ -109,19 +111,22 @@
 <body>
 
   <header>
-    <h1>Dominique Joguin</h1>
-    <p class="tagline">
-      Directeur de Programme augmenté par l’IA | Architecte Produit & Gouvernance
-          </p>
-    <p class="tagline">
-            AI-Augmented Program Director | Product & Governance Architect
-          </p>
+    <h1 data-i18n="name">Dominique Joguin</h1>
+
+    <!-- 2 taglines : affichage conditionnel selon langue navigateur -->
+    <p class="tagline" data-i18n="tagline_fr">
+      Directeur de Programme augmenté par l’IA | Architecte Produit &amp; Gouvernance
+    </p>
+    <p class="tagline" data-i18n="tagline_en">
+      AI-Augmented Program Director | Product &amp; Governance Architect
+    </p>
   </header>
 
   <main class="hero">
     <div class="circles">
-      <div class="circle logo">
-        <img src="./assets/images/logo-dj.png" alt="Logo DJ">
+      <!-- 1) Remplacement de l'image centrale (logo) par le médaillon -->
+      <div class="circle medallion">
+        <img src="./assets/images/Portfolio-médaillon.png" alt="DJ IT•AI — Dominique Joguin">
       </div>
 
       <div class="circle">
@@ -131,15 +136,76 @@
   </main>
 
   <nav>
-    <a href="./fr.html">🇫🇷 Français</a>
-    <a href="./en.html">🇬🇧 English</a>
-    <a href="./docs/CV-Joguin_D.pdf" target="_blank">📄 CV</a>
-    <a href="https://www.linkedin.com/in/csidominiquejoguin/" target="_blank">💼 LinkedIn</a>
+    <!-- 2) Menus i18n selon langue navigateur -->
+    <a id="nav-fr" href="./fr.html">🇫🇷 <span data-i18n="nav_fr">Français</span></a>
+    <a id="nav-en" href="./en.html">🇬🇧 <span data-i18n="nav_en">English</span></a>
+    <a href="./docs/CV-Joguin_D.pdf" target="_blank" rel="noopener noreferrer">📄 <span data-i18n="nav_cv">CV</span></a>
+    <a href="https://www.linkedin.com/in/csidominiquejoguin/" target="_blank" rel="noopener noreferrer">💼 <span data-i18n="nav_linkedin">LinkedIn</span></a>
   </nav>
 
   <footer>
-    © Dominique Joguin — 2026 | ver.21-02_10-38
+    © <span data-i18n="footer_name">Dominique Joguin</span> — 2026 | <span data-i18n="footer_ver">ver.21-02_10-38</span>
   </footer>
+
+  <script>
+    (function () {
+      const lang = (navigator.language || navigator.userLanguage || "en").toLowerCase();
+      const isFR = lang.startsWith("fr");
+
+      const t = isFR
+        ? {
+            page_title: "Dominique Joguin — Portfolio",
+            name: "Dominique Joguin",
+            tagline_fr: "Directeur de Programme augmenté par l’IA | Architecte Produit & Gouvernance",
+            tagline_en: "AI-Augmented Program Director | Product & Governance Architect",
+            nav_fr: "Français",
+            nav_en: "English",
+            nav_cv: "CV",
+            nav_linkedin: "LinkedIn",
+            footer_name: "Dominique Joguin",
+            footer_ver: "ver.21-02_10-38"
+          }
+        : {
+            page_title: "Dominique Joguin — Portfolio",
+            name: "Dominique Joguin",
+            tagline_fr: "Directeur de Programme augmenté par l’IA | Architecte Produit & Gouvernance",
+            tagline_en: "AI-Augmented Program Director | Product & Governance Architect",
+            nav_fr: "French",
+            nav_en: "English",
+            nav_cv: "Resume",
+            nav_linkedin: "LinkedIn",
+            footer_name: "Dominique Joguin",
+            footer_ver: "ver.21-02_10-38"
+          };
+
+      // Titre onglet
+      document.title = t.page_title;
+
+      // Inject textes i18n
+      document.querySelectorAll("[data-i18n]").forEach((el) => {
+        const key = el.getAttribute("data-i18n");
+        if (t[key]) el.textContent = t[key];
+      });
+
+      // Afficher la bonne tagline
+      const frTag = document.querySelector('[data-i18n="tagline_fr"]');
+      const enTag = document.querySelector('[data-i18n="tagline_en"]');
+      if (frTag && enTag) {
+        frTag.style.display = isFR ? "" : "none";
+        enTag.style.display = isFR ? "none" : "";
+      }
+
+      // Option : mettre en gras la langue détectée
+      const frLink = document.getElementById("nav-fr");
+      const enLink = document.getElementById("nav-en");
+      if (frLink && enLink) {
+        (isFR ? frLink : enLink).style.fontWeight = "700";
+      }
+
+      // Met à jour l'attribut lang (utile accessibilité / SEO)
+      document.documentElement.lang = isFR ? "fr" : "en";
+    })();
+  </script>
 
 </body>
 </html>
