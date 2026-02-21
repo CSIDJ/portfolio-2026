@@ -148,64 +148,69 @@
   </footer>
 
   <script>
-    (function () {
-      const lang = (navigator.language || navigator.userLanguage || "en").toLowerCase();
-      const isFR = lang.startsWith("fr");
+  (function () {
+    // 1) Priorité : paramètre URL ?lang=fr|en
+    const params = new URLSearchParams(window.location.search);
+    const forced = (params.get("lang") || "").toLowerCase();
 
-      const t = isFR
-        ? {
-            page_title: "Dominique Joguin — Portfolio",
-            name: "Dominique Joguin",
-            tagline_fr: "Directeur de Programme augmenté par l’IA | Architecte Produit & Gouvernance",
-            tagline_en: "AI-Augmented Program Director | Product & Governance Architect",
-            nav_fr: "Français",
-            nav_en: "English",
-            nav_cv: "CV",
-            nav_linkedin: "LinkedIn",
-            footer_name: "Dominique Joguin",
-            footer_ver: "ver.21-02_10-38"
-          }
-        : {
-            page_title: "Dominique Joguin — Portfolio",
-            name: "Dominique Joguin",
-            tagline_fr: "Directeur de Programme augmenté par l’IA | Architecte Produit & Gouvernance",
-            tagline_en: "AI-Augmented Program Director | Product & Governance Architect",
-            nav_fr: "French",
-            nav_en: "English",
-            nav_cv: "Resume",
-            nav_linkedin: "LinkedIn",
-            footer_name: "Dominique Joguin",
-            footer_ver: "ver.21-02_10-38"
-          };
+    // 2) Sinon : langue navigateur (FR -> fr, sinon -> en)
+    const browserLang = (navigator.language || navigator.userLanguage || "en").toLowerCase();
 
-      // Titre onglet
-      document.title = t.page_title;
+    const lang = (forced === "fr" || forced === "en")
+      ? forced
+      : (browserLang.startsWith("fr") ? "fr" : "en");
 
-      // Inject textes i18n
-      document.querySelectorAll("[data-i18n]").forEach((el) => {
-        const key = el.getAttribute("data-i18n");
-        if (t[key]) el.textContent = t[key];
-      });
+    const isFR = (lang === "fr");
 
-      // Afficher la bonne tagline
-      const frTag = document.querySelector('[data-i18n="tagline_fr"]');
-      const enTag = document.querySelector('[data-i18n="tagline_en"]');
-      if (frTag && enTag) {
-        frTag.style.display = isFR ? "" : "none";
-        enTag.style.display = isFR ? "none" : "";
-      }
+    const t = isFR
+      ? {
+          page_title: "Dominique Joguin — Portfolio",
+          name: "Dominique Joguin",
+          tagline_fr: "Directeur de Programme augmenté par l’IA | Architecte Produit & Gouvernance",
+          tagline_en: "AI-Augmented Program Director | Product & Governance Architect",
+          nav_fr: "Français",
+          nav_en: "English",
+          nav_cv: "CV",
+          nav_linkedin: "LinkedIn"
+        }
+      : {
+          page_title: "Dominique Joguin — Portfolio",
+          name: "Dominique Joguin",
+          tagline_fr: "Directeur de Programme augmenté par l’IA | Architecte Produit & Gouvernance",
+          tagline_en: "AI-Augmented Program Director | Product & Governance Architect",
+          nav_fr: "French",
+          nav_en: "English",
+          nav_cv: "Resume",
+          nav_linkedin: "LinkedIn"
+        };
 
-      // Option : mettre en gras la langue détectée
-      const frLink = document.getElementById("nav-fr");
-      const enLink = document.getElementById("nav-en");
-      if (frLink && enLink) {
-        (isFR ? frLink : enLink).style.fontWeight = "700";
-      }
+    document.title = t.page_title;
 
-      // Met à jour l'attribut lang (utile accessibilité / SEO)
-      document.documentElement.lang = isFR ? "fr" : "en";
-    })();
-  </script>
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
+      const key = el.getAttribute("data-i18n");
+      if (t[key]) el.textContent = t[key];
+    });
+
+    // Afficher uniquement la tagline pertinente
+    const frTag = document.querySelector('[data-i18n="tagline_fr"]');
+    const enTag = document.querySelector('[data-i18n="tagline_en"]');
+    if (frTag && enTag) {
+      frTag.style.display = isFR ? "" : "none";
+      enTag.style.display = isFR ? "none" : "";
+    }
+
+    // Gras sur la langue active
+    const frLink = document.getElementById("nav-fr");
+    const enLink = document.getElementById("nav-en");
+    if (frLink && enLink) {
+      frLink.style.fontWeight = isFR ? "700" : "500";
+      enLink.style.fontWeight = isFR ? "500" : "700";
+    }
+
+    // Met à jour lang HTML
+    document.documentElement.lang = isFR ? "fr" : "en";
+  })();
+</script>
 
 </body>
 </html>
