@@ -40,6 +40,15 @@ h1{
   color:var(--muted);
 }
 
+.portfolio-kicker{
+  margin-top:10px;
+  font-size:13px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:#6b7280;
+  font-weight:700;
+}
+
 /* HERO */
 .hero{
   flex:1;
@@ -127,11 +136,26 @@ nav a:hover{
 }
 
 footer{
-  text-align:center;
   padding:14px;
   font-size:13px;
   color:#6b7280;
   border-top:1px solid var(--border);
+}
+
+.footer-row{
+  width:min(720px,80vw);
+  margin:0 auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+}
+
+@media (max-width:860px){
+  .footer-row{
+    flex-direction:column;
+    align-items:center;
+  }
 }
 </style>
 
@@ -141,6 +165,7 @@ footer{
 
 <header>
   <h1 data-i18n="name">Dominique Joguin</h1>
+  <p class="portfolio-kicker">Portfolio 2026</p>
 
   <p class="tagline" data-i18n="tagline_fr">
     Directeur de Programme augmenté par l’IA | Architecte Produit & Gouvernance
@@ -168,13 +193,15 @@ footer{
 <nav>
   <a id="nav-fr" href="./index.html?lang=fr">🇫🇷 <span data-i18n="nav_fr">Français</span></a>
   <a id="nav-en" href="./index.html?lang=en">🇬🇧 <span data-i18n="nav_en">English</span></a>
-  <a href="./docs/CV-Joguin_D.pdf" target="_blank">📄 <span data-i18n="nav_cv">CV</span></a>
+  <a id="nav-cv" href="./cv-fr.html">📄 <span data-i18n="nav_cv">CV</span></a>
   <a href="https://www.linkedin.com/in/csidominiquejoguin/" target="_blank">💼 <span data-i18n="nav_linkedin">LinkedIn</span></a>
 </nav>
 
 <footer>
-  © <span data-i18n="footer_name">Dominique Joguin</span> — 2026 |
-  <span data-i18n="footer_ver">ver.21-02_12-15</span>
+  <div class="footer-row">
+    <span>© Dominique Joguin 2026</span>
+    <span>ver.21-02_12-15</span>
+  </div>
 </footer>
 
 <script>
@@ -231,7 +258,12 @@ document.documentElement.lang=isFR?"fr":"en";
 /* lien dynamique */
 const portfolioLink=document.getElementById("portfolio-link");
 if(portfolioLink){
-  portfolioLink.href=isFR?"./fr.html":"./en.html";
+  portfolioLink.href=isFR?"./profile-fr.html":"./profile-en.html";
+}
+
+const cvLink=document.getElementById("nav-cv");
+if(cvLink){
+  cvLink.href=isFR?"./cv-fr.html":"./cv-en.html";
 }
 
 })();

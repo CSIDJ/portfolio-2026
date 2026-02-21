@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resume — Dominique Joguin</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --text: #111827;
+      --muted: #4b5563;
+      --line: #e5e7eb;
+      --accent: #1f2937;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 32px 20px;
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 32px;
+      text-align: center;
+    }
+
+    .tagline {
+      margin: 4px 0 0 0;
+      color: var(--muted);
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .site-layout {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 24px 20px 60px;
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .site-sidebar {
+      position: sticky;
+      top: 16px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--surface);
+      padding: 12px;
+      box-shadow: 0 2px 12px rgba(15, 23, 42, 0.04);
+    }
+
+    .side-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .side-nav a,
+    .uc-toggle {
+      text-decoration: none;
+      font-size: 14px;
+      color: var(--accent);
+      white-space: nowrap;
+    }
+
+    .uc-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .uc-toggle::after {
+      content: "▾";
+      margin-left: 0;
+      width: 20px;
+      height: 20px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+      font-size: 12px;
+      transition: transform 0.18s ease;
+      transform: rotate(-90deg);
+    }
+    .uc-list {
+      list-style: none;
+      margin: 4px 0 0;
+      padding: 0 0 0 8px;
+      display: none;
+    }
+
+    .uc-list li { margin: 0; }
+
+    .uc-list a {
+      display: block;
+      padding: 6px 4px;
+      border-radius: 6px;
+    }
+
+    .uc-list a:hover { background: #f3f4f6; }
+    .uc-menu.is-open .uc-list { display: block; }
+    .uc-menu.is-open .uc-toggle::after { transform: rotate(0deg); }
+
+    .uc-parent-link {
+      display: inline-block;
+      flex: 1;
+      min-width: 0;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .side-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 12px;
+      flex-wrap: nowrap;
+    }
+
+    .side-actions a {
+      flex: 1 1 0;
+      min-width: 0;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      white-space: nowrap;
+      text-decoration: none;
+      font-size: 14px;
+      color: var(--accent);
+      padding: 7px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      font-weight: 600;
+      line-height: 1;
+      box-shadow: 0 1px 4px rgba(15, 23, 42, 0.06);
+    }
+
+    .site-content {
+      border-left: 1px solid var(--line);
+      padding-left: 24px;
+    }
+
+    .doc-tools {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 0 0 10px;
+    }
+
+    .tool-btn {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--accent);
+      padding: 7px 12px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 1px 4px rgba(15, 23, 42, 0.06);
+    }
+
+    .site-layout.sidebar-collapsed {
+      grid-template-columns: 1fr;
+    }
+
+    .site-layout.sidebar-collapsed .site-sidebar {
+      display: none;
+    }
+
+    .site-layout.sidebar-collapsed .site-content {
+      border-left: 0;
+      padding-left: 0;
+    }
+
+    .doc-card {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--surface);
+      padding: 12px;
+      box-shadow: 0 3px 18px rgba(15, 23, 42, 0.04);
+    }
+
+    .doc-frame {
+      width: 100%;
+      height: 75vh;
+      min-height: 640px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: #fff;
+    }
+
+    .doc-link {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .doc-link a {
+      color: #0f172a;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 16px 20px;
+      color: #6b7280;
+      font-size: 14px;
+      background: var(--surface);
+    }
+
+    .footer-row {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    @media (max-width: 860px) {
+      .site-layout {
+        grid-template-columns: 1fr;
+        align-items: start;
+      }
+
+      .site-sidebar {
+        position: static;
+        align-self: auto;
+      }
+
+      .site-content {
+        border-left: 0;
+        padding-left: 0;
+      }
+
+      .doc-frame {
+        height: 68vh;
+        min-height: 520px;
+      }
+
+      .footer-row {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Dominique Joguin</h1>
+    <p class="tagline">AI-Orchestrated Program Director | Product & Governance Architect</p>
+  </header>
+
+  <div id="doc-layout" class="site-layout">
+    <aside class="site-sidebar">
+      <nav class="side-nav">
+        <a href="./index.html">🏠 Home</a>
+        <a href="./profile-en.html">👤 Profile</a>
+        <div class="uc-menu">
+          <span class="uc-toggle"><a class="uc-parent-link" href="./case-studies.html">📚 Case Studies</a></span>
+          <ul class="uc-list">
+            <li><a href="./projects/saas-platform.html">🚀 SaaS Platform</a></li>
+            <li><a href="./projects/budget-manager.html">📊 Budget Manager</a></li>
+            <li><a href="./projects/video-scanner.html">🎬 Video Automation Tool</a></li>
+            <li><a href="./projects/copilot-pilot-iteration.html">🧪 AI Pilot Iteration (GitHub Copilot)</a></li>
+            <li><a href="./projects/consortium-si-website.html">🌐 Consortium SI Corporate Website</a></li>
+            <li><a href="./projects/ai-orchestration-framework.html">🤖 AI Delivery Framework</a></li>
+          </ul>
+        </div>
+        <a href="./cv-en.html" aria-current="page">📄 Resume</a>
+        <a href="./dossier-en.html">🧾 Skills Dossier</a>
+        <a href="https://www.linkedin.com/in/csidominiquejoguin/" target="_blank">💼 LinkedIn</a>
+        <a href="https://github.com/CSIDJ" target="_blank">🧑‍💻 GitHub</a>
+      </nav>
+      <div class="side-actions">
+        <a href="#" onclick="history.back(); return false;">↩ Back</a>
+        <a href="./cv-fr.html">🇫🇷 Français</a>
+      </div>
+    </aside>
+
+    <main class="site-content">
+      <section>
+        <h2>📄 Resume</h2>
+        <div class="doc-tools">
+          <button type="button" id="toggle-sidebar" class="tool-btn">☰ Hide menu</button>
+          <button type="button" id="open-fullscreen" class="tool-btn">⤢ Fullscreen</button>
+        </div>
+        <div class="doc-card">
+          <iframe id="doc-frame" class="doc-frame" src="./docs/CV-Joguin_D.pdf#view=FitH" title="Dominique Joguin Resume"></iframe>
+          <p class="doc-link">If the PDF does not display, <a href="./docs/CV-Joguin_D.pdf" target="_blank">open the resume in a new tab</a>.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <div class="footer-row">
+      <span>© Dominique Joguin 2026</span>
+      <span>ver.21-02_12-15</span>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var layout = document.getElementById("doc-layout");
+      var toggle = document.getElementById("toggle-sidebar");
+      var fsBtn = document.getElementById("open-fullscreen");
+      var frame = document.getElementById("doc-frame");
+      if (!layout || !toggle || !fsBtn || !frame) return;
+
+      var hideText = "☰ Hide menu";
+      var showText = "☰ Show menu";
+
+      toggle.addEventListener("click", function () {
+        layout.classList.toggle("sidebar-collapsed");
+        toggle.textContent = layout.classList.contains("sidebar-collapsed") ? showText : hideText;
+      });
+
+      fsBtn.addEventListener("click", function () {
+        if (!document.fullscreenElement && frame.requestFullscreen) {
+          frame.requestFullscreen();
+          return;
+        }
+        if (document.exitFullscreen && document.fullscreenElement) {
+          document.exitFullscreen();
+          return;
+        }
+        window.open(frame.getAttribute("src"), "_blank");
+      });
+    })();
+  </script>
+  <script src="./assets/js/project-nav.js"></script>
+</body>
+</html>
