@@ -1,0 +1,43 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor / local workspace
+.vscode/
+*.swp
+*.tmp
+
+# Local-only private workspace (never push)
+local-private/
+private/
+secrets/
+notes-private/
+assets/videos/
+
+# Local internal notes / drafts (keep local)
+notes/
+projects/*-internal.md
+projects/*-private.md
+projects/budget-manager-fr.md
+
+# Local config / env files
+.env
+.env.*
+!.env.example
+*.local
+*.local.*
+
+# Credentials and keys
+*.pem
+*.key
+*.p12
+*.pfx
+*.kdbx
+id_rsa
+id_ed25519
+
+# Local archives / backups
+*.bak
+*.old
+*.zip
+*.7z
