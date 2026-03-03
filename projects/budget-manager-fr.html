@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>📊 Budget Manager — Application Local-First — Portfolio 2026</title>
+  <title>📊 Budget Manager (V1) — Portfolio 2026</title>
   <link rel="stylesheet" href="../assets/css/project-pages.css" />
 </head>
 <body>
@@ -11,7 +11,7 @@
     <div class="project-shell">
       <div class="project-brand">
         <h1 class="project-name">Dominique Joguin</h1>
-        <p class="project-tagline">Directeur de Programme augmente par l'IA | Architecte Produit & Gouvernance</p>
+        <p class="project-tagline">Chef de Projet Digital AMOA | IA, Data, Automatisation</p>
       </div>
     </div>
   </header>
@@ -29,13 +29,16 @@
           <div class="uc-menu">
             <span class="uc-toggle"><a class="uc-parent-link" href="../case-studies-fr.html">📚 Études de cas</a></span>
             <ul class="uc-list">
-              <li><a href="./saas-platform-fr.html">🚀 Plateforme SaaS</a></li>
+              <li><a href="./saas-platform-fr.html">🚀 Plateforme SaaS PM² Multi-Tenant</a></li>
               <li><a href="./budget-manager-fr.html" aria-current="page">📊 Budget Manager</a></li>
-              <li><a href="./video-scanner-fr.html">🎬 Outil Vidéo</a></li>
-              <li><a href="./copilot-pilot-iteration-fr.html">🧪 Itération pilote IA (GitHub Copilot)</a></li>
+              <li><a href="./video-scanner-fr.html">🎬 Videos finder</a></li>
+              <li><a href="./copilot-pilot-iteration-fr.html">🧪 Tetris via GitHub Copilot</a></li>
               <li><a href="./consortium-si-website-fr.html">🌐 Site institutionnel Consortium SI</a></li>
-              <li><a href="./ai-orchestration-framework-fr.html">🤖 Framework IA</a></li>
-            </ul>
+              <li><a href="./credit-manager-poc-fr.html">💳 POC Credit Manager</a></li>
+                          <li><a href="#" class="uc-coming-soon" data-soon-text="En cours de réalisation">🧩 Expérimentation Serveur MCP</a></li>
+              <li><a href="#" class="uc-coming-soon" data-soon-text="En cours de réalisation">🤖 Agent via LangChain (Scrimba)</a></li>
+            <li><a href="./ai-orchestration-framework-fr.html">🤖 Framework IA</a></li>
+              </ul>
           </div>
           <a href="../cv-fr.html">📄 CV</a>
           <a href="../dossier-fr.html">🧾 DCS</a>
@@ -46,90 +49,149 @@
       </nav>
     </aside>
     <main class="page-content">
-      <article>
-<h1>📊 Budget Manager — Application Local-First</h1>
-<h2>🎯 Objectif</h2>
-<p>Concevoir et livrer une application de gestion budgétaire locale centrée sur la gestion structurée de l’état, la persistance des données et une exécution native Linux.</p>
-<p><strong>Ce projet a servi de :</strong></p>
+      <article class="use-case-article">
+<h1>📊 Budget Manager (V1)</h1>
+<h2>🎯 Contexte &amp; objectif</h2>
+<p>Ce projet sert de démonstrateur pour structurer un besoin de pilotage budgétaire, depuis la collecte des besoins de reporting jusqu’à la restitution d’indicateurs exploitables.</p>
+<p>L’approche est orientée AMOA : fiabilité des données, lisibilité décisionnelle et adoption par les profils d’usage non techniques.</p>
+<hr />
+<div class="section-head-row">
+  <h2>🖼 Captures d'écran</h2>
+</div>
+<div class="use-case-media use-case-media--slider-only">
+  <section class="demo-shot-block">
+    <h3>Captures d'écran</h3>
+    <div class="shot-slider" data-shot-slider>
+      <div class="shot-slider-track">
+        <figure class="shot-slide is-active">
+          <img src="../assets/images/Budget_Manager/accueil-budget.png" alt="Capture Budget Manager: accueil budget" loading="lazy" />
+          <figcaption>Ecran: Accueil budget</figcaption>
+        </figure>
+        <figure class="shot-slide">
+          <img src="../assets/images/Budget_Manager/compte-lecture-rapide.png" alt="Capture Budget Manager: compte lecture rapide" loading="lazy" />
+          <figcaption>Ecran: Compte lecture rapide</figcaption>
+        </figure>
+        <figure class="shot-slide">
+          <img src="../assets/images/Budget_Manager/cr%C3%A9ation-%C3%A9ch%C3%A9ancier.png" alt="Capture Budget Manager: création échéancier" loading="lazy" />
+          <figcaption>Ecran: Création échéancier</figcaption>
+        </figure>
+        <figure class="shot-slide">
+          <img src="../assets/images/Budget_Manager/gestion-cr%C3%A9ation-op%C3%A9ration.png" alt="Capture Budget Manager: gestion création opération" loading="lazy" />
+          <figcaption>Ecran: Gestion création opération</figcaption>
+        </figure>
+        <figure class="shot-slide">
+          <img src="../assets/images/Budget_Manager/gestion-suivi-compte.png" alt="Capture Budget Manager: gestion suivi compte" loading="lazy" />
+          <figcaption>Ecran: Gestion suivi compte</figcaption>
+        </figure>
+        <figure class="shot-slide">
+          <img src="../assets/images/Budget_Manager/gestion-suivi-%C3%A9ch%C3%A9ancier.png" alt="Capture Budget Manager: gestion suivi échéancier" loading="lazy" />
+          <figcaption>Ecran: Gestion suivi échéancier</figcaption>
+        </figure>
+        <figure class="shot-slide">
+          <img src="../assets/images/Budget_Manager/sidebar.png" alt="Capture Budget Manager: navigation latérale" loading="lazy" />
+          <figcaption>Ecran: Navigation latérale</figcaption>
+        </figure>
+      </div>
+      <div class="shot-slider-controls">
+        <button type="button" class="shot-nav prev" data-slide-prev aria-label="Capture précédente">◀</button>
+        <div class="shot-dots" data-slide-dots></div>
+        <button type="button" class="shot-nav next" data-slide-next aria-label="Capture suivante">▶</button>
+      </div>
+    </div>
+  </section>
+</div>
+<hr />
+<h2>🧪 Positionnement original du use case</h2>
+<p>Le use case a d’abord été conçu comme un terrain d’expérimentation “projet simple” pour tester la chaîne complète: cadrage, réalisation, validation, corrections et capitalisation.</p>
 <ul>
-<li>Validation de workflows de développement assisté par IA</li>
-<li>Terrain d’expérimentation sur l’architecture d’état UI</li>
-<li>Exercice de packaging et distribution Linux</li>
+<li>Rôles IA distribués (analyse, implémentation, revue, QA)</li>
+<li>Combinaison de GPTs OpenAI, Projects Perplexity, Gemini CLI, Claude, Roo Code, OpenRouter, Bolt.new</li>
+<li>Affinage progressif des custom instructions selon les constats de chaque itération</li>
+</ul>
+<p>Dans ce use case, les rôles projet sont assurés par des agents IA préconfigurés, pas par une équipe humaine opérationnelle.</p>
+<p>Aucune étude de besoins avec parties prenantes humaines n’a été menée sur ce cas.</p>
+<hr />
+<h2>🏗 Ancrage technique (version originale)</h2>
+<ul>
+<li>Application local-first avec interface Streamlit</li>
+<li>Gestion de l’état applicatif et persistance structurée des données</li>
+<li>Préparation à une évolution SQL/BI et industrialisation des rapports</li>
+<li>Cadre de debug et de stabilisation orienté fiabilité de restitution</li>
 </ul>
 <hr />
-<h2>🏗 Vue d’Architecture</h2>
-<p><strong>Couche Frontend :</strong></p>
+<h2>👤 Rôle AMOA / Product Owner</h2>
 <ul>
-<li>Interface Streamlit</li>
-<li>Gestion structurée du session state</li>
-<li>Patterns d’initialisation défensive</li>
-</ul>
-<p><strong>Couche Persistance :</strong></p>
-<ul>
-<li>Stockage local basé sur JSON</li>
-<li>Segmentation mensuelle des données</li>
-<li>Structure prête pour évolution versionnée</li>
-</ul>
-<p><strong>Environnement d’exécution :</strong></p>
-<ul>
-<li>Isolation via environnement virtuel Python</li>
-<li>Runtime Streamlit</li>
-<li>Déploiement local Linux</li>
+<li>Qualification des besoins métiers (finance, management, pilotage opérationnel)</li>
+<li>Traduction des attentes en fonctionnalités de saisie, consolidation et reporting</li>
+<li>Définition des règles de gestion pour garantir la cohérence des données</li>
+<li>Priorisation du backlog selon la valeur métier et l’effort de mise en œuvre</li>
 </ul>
 <hr />
-<h2>🧠 Défis Techniques</h2>
+<h2>🧩 Démarche Data &amp; BI</h2>
+<h3>1. Modélisation des données</h3>
 <ul>
-<li>Stabilisation de <code>st.session_state</code></li>
-<li>Prévention des erreurs liées aux états nuls</li>
-<li>Structuration du stockage JSON persistant</li>
-<li>Préparation d’une future migration vers base de données</li>
+<li>Structuration des catégories de dépenses/recettes et des périodes d’analyse</li>
+<li>Définition de contrôles de qualité (formats, doublons, valeurs incohérentes)</li>
+<li>Préparation à une évolution vers base SQL et connecteurs BI</li>
+</ul>
+<h3>2. Reporting décisionnel</h3>
+<ul>
+<li>Construction d’indicateurs de suivi (écarts, tendances, prévisionnel simple)</li>
+<li>Conception d’une restitution lisible par profils métier</li>
+<li>Préparation d’un cadre de tableaux de bord transposable à des solutions BI gratuites ou open source</li>
+</ul>
+<h3>3. Qualité et recette</h3>
+<ul>
+<li>Scénarios de tests fonctionnels sur la chaîne saisie-calcul-restitution</li>
+<li>Vérification de traçabilité des corrections</li>
+<li>Validation de la fiabilité des chiffres présentés aux décideurs</li>
 </ul>
 <hr />
-<h2>🛠 Stratégie de Déploiement</h2>
-<p><strong>Conçue pour :</strong></p>
+<h2>🔄 Accompagnement au changement</h2>
 <ul>
-<li>Exécution locale</li>
-<li>Isolation par environnement virtuel</li>
-<li>Distribution Linux</li>
-<li>Packaging potentiel en AppImage</li>
-</ul>
-<p><strong>Flux utilisateur :</strong></p>
-<ol>
-<li>Activation de l’environnement virtuel</li>
-<li>Lancement du serveur Streamlit</li>
-<li>Accès via navigateur local</li>
-<li>Persistance structurée des données</li>
-</ol>
-<hr />
-<h2>🤖 Développement Assisté par IA</h2>
-<p><strong>Approche incluant :</strong></p>
-<ul>
-<li>Génération itérative de code</li>
-<li>Boucles de validation structurées</li>
-<li>Cycles de refactoring</li>
-<li>Simulation d’erreurs &amp; correction</li>
-<li>Nettoyage progressif de l’architecture</li>
-</ul>
-<p><strong>L’IA a été utilisée comme :</strong></p>
-<ul>
-<li>Accélérateur</li>
-<li>Relecteur technique</li>
-<li>Assistant de refactoring</li>
-<li>Simulateur de cas limites</li>
+<li>Rédaction d’un guide d’usage orienté profils métiers cibles</li>
+<li>Formalisation des bonnes pratiques de saisie</li>
+<li>Transmission d’un socle de montée en autonomie pour les rôles métiers simulés</li>
 </ul>
 <hr />
-<h2>📈 Ce que cela démontre</h2>
+<h2>📈 Livrables et valeur créée</h2>
 <ul>
-<li>Livraison produit concrète</li>
-<li>Approche local-first</li>
-<li>Conscience des contraintes de déploiement</li>
-<li>Méthodologie de debug structurée</li>
-<li>Orchestration IA contrôlée</li>
+<li>Prototype fonctionnel de reporting budgétaire</li>
+<li>Règles de gestion et plan de tests documentés</li>
+<li>Cadre de qualité des données réutilisable sur d’autres projets BI</li>
+<li>Base de travail robuste pour industrialisation future</li>
 </ul>
+<hr />
+<h2>✅ Compétences démontrées pour le poste</h2>
+<ul>
+<li>Capacité à transformer un besoin de pilotage en solution décisionnelle concrète</li>
+<li>Maîtrise du lien métier-data-outil</li>
+<li>Rigueur de recette et sécurisation de la qualité de données</li>
+<li>Posture transverse entre logique finance, rôles d’usage simulés et technique</li>
+</ul>
+<hr />
+<div class="section-head-row">
+  <h2>🎬 Démo vidéo</h2>
+</div>
+<section class="demo-video-block demo-video-block--bottom">
+  <h3>Vidéo courte (boucle)</h3>
+  <video class="use-case-video" controls autoplay loop muted playsinline preload="metadata">
+    <source src="../assets/videos/Budget_Manager/2026-03-03%2020-43-15.mkv" type="video/x-matroska" />
+    Votre navigateur ne supporte pas la lecture vidéo HTML5.
+  </video>
+  <p class="media-note">Si la vidéo ne se lance pas dans le navigateur: <a href="../assets/videos/Budget_Manager/2026-03-03%2020-43-15.mkv" target="_blank" rel="noopener noreferrer">ouvrir la vidéo</a></p>
+</section>
 <hr />
 <h2>🔐 Accès au code</h2>
-<p>Le dépôt vitrine public est disponible. La version structurée complète est accessible sur demande professionnelle.</p>
-<p>📧 <a href="mailto:dominique.joguin@outlook.com">dominique.joguin@outlook.com</a></p>
+<p>Les POC et MVP associés à ce use case sont démontrables sur demande, avec présentation du fonctionnement concret (parcours, logique, livrables et critères de validation).</p>
+<div class="code-access-row">
+  <p class="code-access-email">📧 <a href="mailto:dominique.joguin@outlook.com">dominique.joguin@outlook.com</a></p>
+  <a class="code-access-github" href="https://github.com/CSIDJ" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir le profil GitHub">
+    <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+      <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.65 7.65 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"></path>
+    </svg>
+  </a>
+</div>
     </article>
     </main>
   </div>
@@ -137,9 +199,10 @@
   <footer class="project-footer">
     <div class="project-shell">
       <span class="footer-left">© Dominique Joguin 2026</span>
-      <span class="footer-right">ver.21-02_12-15</span>
+      <span class="footer-right">ver.03-03_21-23</span>
     </div>
   </footer>
   <script src="../assets/js/project-nav.js"></script>
+  <script src="../assets/js/use-case-media.js"></script>
 </body>
 </html>

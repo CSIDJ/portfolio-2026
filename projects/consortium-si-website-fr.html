@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>🌐 Site institutionnel Consortium SI — Portfolio 2026</title>
+  <title>🌐 Site institutionnel Consortium SI (Vx) — Portfolio 2026</title>
   <link rel="stylesheet" href="../assets/css/project-pages.css" />
 </head>
 <body>
@@ -11,7 +11,7 @@
     <div class="project-shell">
       <div class="project-brand">
         <h1 class="project-name">Dominique Joguin</h1>
-        <p class="project-tagline">Directeur de Programme augmente par l'IA | Architecte Produit & Gouvernance</p>
+        <p class="project-tagline">Chef de Projet Digital AMOA | IA, Data, Automatisation</p>
       </div>
     </div>
   </header>
@@ -29,13 +29,16 @@
           <div class="uc-menu">
             <span class="uc-toggle"><a class="uc-parent-link" href="../case-studies-fr.html">📚 Études de cas</a></span>
             <ul class="uc-list">
-              <li><a href="./saas-platform-fr.html">🚀 Plateforme SaaS</a></li>
+              <li><a href="./saas-platform-fr.html">🚀 Plateforme SaaS PM² Multi-Tenant</a></li>
               <li><a href="./budget-manager-fr.html">📊 Budget Manager</a></li>
-              <li><a href="./video-scanner-fr.html">🎬 Outil Vidéo</a></li>
-              <li><a href="./copilot-pilot-iteration-fr.html">🧪 Itération pilote IA (GitHub Copilot)</a></li>
+              <li><a href="./video-scanner-fr.html">🎬 Videos finder</a></li>
+              <li><a href="./copilot-pilot-iteration-fr.html">🧪 Tetris via GitHub Copilot</a></li>
               <li><a href="./consortium-si-website-fr.html" aria-current="page">🌐 Site institutionnel Consortium SI</a></li>
-              <li><a href="./ai-orchestration-framework-fr.html">🤖 Framework IA</a></li>
-            </ul>
+              <li><a href="./credit-manager-poc-fr.html">💳 POC Credit Manager</a></li>
+                          <li><a href="#" class="uc-coming-soon" data-soon-text="En cours de réalisation">🧩 Expérimentation Serveur MCP</a></li>
+              <li><a href="#" class="uc-coming-soon" data-soon-text="En cours de réalisation">🤖 Agent via LangChain (Scrimba)</a></li>
+            <li><a href="./ai-orchestration-framework-fr.html">🤖 Framework IA</a></li>
+              </ul>
           </div>
           <a href="../cv-fr.html">📄 CV</a>
           <a href="../dossier-fr.html">🧾 DCS</a>
@@ -46,21 +49,199 @@
       </nav>
     </aside>
     <main class="page-content">
-      <article>
-<h1>🌐 Site institutionnel Consortium SI</h1>
-<h2>🎯 Objectif</h2>
-<p>Concevoir et structurer une présence web claire et professionnelle pour Consortium SI, alignée avec les enjeux de positionnement, de crédibilité et de visibilité des services.</p>
+      <article class="use-case-article">
+<h1>🌐 Site institutionnel Consortium SI (Vx)</h1>
+<h2>🎯 Contexte &amp; enjeu</h2>
+<p>Ce projet illustre une démarche de chef de projet digital orientée AMOA pour construire un canal web clair, crédible et utile aux différents publics cibles (clients, partenaires, prospects).</p>
+<p>Le besoin principal : transformer des attentes business hétérogènes en parcours d’usage lisibles et en contenu structuré.</p>
 <hr />
-<h2>🏗 Périmètre de livraison</h2>
+<div class="section-head-row">
+  <h2>🖼 Captures d'écran</h2>
+  <a class="media-link-btn" href="https://consortiumsi-fr.vercel.app/" target="_blank" rel="noopener noreferrer">Ouvrir la démo live</a>
+</div>
+<div class="use-case-media use-case-media--slider-only">
+  <section class="demo-shot-block">
+    <div class="shot-slider" data-shot-slider>
+      <div class="shot-slider-track">
+        <figure class="shot-slide is-active">
+          <img src="../assets/images/Consortiumsi.fr/home.png" alt="Capture réelle 1 du site Consortium SI" loading="lazy" />
+          <figcaption>Vue de la page d’accueil.</figcaption>
+        </figure>
+        <figure class="shot-slide">
+          <img src="../assets/images/Consortiumsi.fr/services.png" alt="Capture réelle 2 du site Consortium SI" loading="lazy" />
+          <figcaption>Vue de la page services.</figcaption>
+        </figure>
+        <figure class="shot-slide">
+          <img src="../assets/images/Consortiumsi.fr/chatbot.png" alt="Capture réelle 3 du site Consortium SI" loading="lazy" />
+          <figcaption>Vue de la page contact et chatbot.</figcaption>
+        </figure>
+        <figure class="shot-slide">
+          <img src="../assets/images/Consortiumsi.fr/rgpd.png" alt="Capture réelle RGPD du site Consortium SI" loading="lazy" />
+          <figcaption>Vue de la gestion des cookies (consentement et préférences).</figcaption>
+        </figure>
+      </div>
+      <div class="shot-slider-controls">
+        <button type="button" class="shot-nav prev" data-slide-prev aria-label="Capture précédente">◀</button>
+        <div class="shot-dots" data-slide-dots></div>
+        <button type="button" class="shot-nav next" data-slide-next aria-label="Capture suivante">▶</button>
+      </div>
+    </div>
+  </section>
+</div>
+<hr />
+<h2>🧪 Positionnement original du use case</h2>
+<p>Ce cas a servi de terrain d’expérimentation interne, avec un commanditaire unique (moi) comme seule source d’exigences, et une exécution structurée via agents IA.</p>
 <ul>
-<li>Architecture de l’information et hiérarchie des pages</li>
-<li>Mise en page cohérente avec l’identité de marque</li>
-<li>Modèle de navigation principal et préparation bilingue</li>
-<li>Socle performance et accessibilité</li>
+<li>Cadre de pilotage testé sur la chaîne complète (brief, cadrage, réalisation, recette)</li>
+<li>Appui multi-agents IA pour accélérer production et relectures</li>
+<li>Custom instructions affinées pour maintenir cohérence de ton, structure et qualité</li>
+</ul>
+<p>Dans ce use case, les interactions projet sont menées avec des agents IA représentant les rôles, pas avec une équipe humaine opérationnelle.</p>
+<p>Aucune étude de besoins avec parties prenantes humaines n’a été menée sur ce cas.</p>
+<hr />
+<h2>🏗 Ancrage technique (version originale)</h2>
+<ul>
+<li>Architecture de l’information et hiérarchie de pages orientées usage</li>
+<li>Structuration de navigation, templates et logique de contenu bilingue</li>
+<li>Socle performance/accessibilité pour usage professionnel</li>
+<li>Organisation des itérations de correction avec retours ciblés</li>
 </ul>
 <hr />
-<h2>📌 Statut actuel</h2>
-<p>Structure de page préparée. Le contenu détaillé et les éléments de démonstration seront complétés dans la prochaine itération.</p>
+<h2>🛠 Stack &amp; plateformes mobilisées</h2>
+<ul>
+<li><strong>Front-end :</strong> React + Vite + TypeScript + Tailwind CSS</li>
+<li><strong>Navigation :</strong> React Router (SPA)</li>
+<li><strong>Formulaire :</strong> EmailJS (sans backend dédié)</li>
+<li><strong>Versioning :</strong> GitHub (branches, merges, traçabilité)</li>
+<li><strong>Exécution :</strong> VS Code + terminal pour build, debug et QA</li>
+<li><strong>Prototypage :</strong> Bolt.new et StackBlitz pour itérations rapides</li>
+<li><strong>Mise en ligne :</strong> Vercel (build, variables d'environnement, déploiement continu)</li>
+</ul>
+<div class="stack-logo-grid" aria-label="Liens stack et plateformes">
+  <a class="stack-logo-link" href="https://fr.react.dev/" target="_blank" rel="noopener noreferrer" title="React">
+    <span class="stack-logo-mark"><img src="https://cdn.simpleicons.org/react/61DAFB" alt="" /></span>
+    <span>React</span>
+  </a>
+  <a class="stack-logo-link" href="https://vite.dev/" target="_blank" rel="noopener noreferrer" title="Vite">
+    <span class="stack-logo-mark"><img src="https://cdn.simpleicons.org/vite/646CFF" alt="" /></span>
+    <span>Vite</span>
+  </a>
+  <a class="stack-logo-link" href="https://www.typescriptlang.org/fr/" target="_blank" rel="noopener noreferrer" title="TypeScript">
+    <span class="stack-logo-mark"><img src="https://cdn.simpleicons.org/typescript/3178C6" alt="" /></span>
+    <span>TypeScript</span>
+  </a>
+  <a class="stack-logo-link" href="https://tailwindcss.com/docs" target="_blank" rel="noopener noreferrer" title="Tailwind CSS">
+    <span class="stack-logo-mark"><img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" alt="" /></span>
+    <span>Tailwind</span>
+  </a>
+  <a class="stack-logo-link" href="https://reactrouter.com/" target="_blank" rel="noopener noreferrer" title="React Router">
+    <span class="stack-logo-mark"><img src="https://cdn.simpleicons.org/reactrouter/CA4245" alt="" /></span>
+    <span>Router</span>
+  </a>
+  <a class="stack-logo-link" href="https://www.emailjs.com/docs/" target="_blank" rel="noopener noreferrer" title="EmailJS">
+    <span class="stack-logo-mark">EJ</span>
+    <span>EmailJS</span>
+  </a>
+  <a class="stack-logo-link" href="https://docs.github.com/fr" target="_blank" rel="noopener noreferrer" title="GitHub">
+    <span class="stack-logo-mark"><img src="https://cdn.simpleicons.org/github/181717" alt="" /></span>
+    <span>GitHub</span>
+  </a>
+  <a class="stack-logo-link" href="https://code.visualstudio.com/docs" target="_blank" rel="noopener noreferrer" title="VS Code">
+    <span class="stack-logo-mark"><img src="https://cdn.simpleicons.org/visualstudiocode/007ACC" alt="" /></span>
+    <span>VS Code</span>
+  </a>
+  <a class="stack-logo-link" href="https://stackblitz.com/" target="_blank" rel="noopener noreferrer" title="StackBlitz">
+    <span class="stack-logo-mark"><img src="https://cdn.simpleicons.org/stackblitz/1269D3" alt="" /></span>
+    <span>StackBlitz</span>
+  </a>
+  <a class="stack-logo-link" href="https://bolt.new/" target="_blank" rel="noopener noreferrer" title="Bolt.new">
+    <span class="stack-logo-mark">B</span>
+    <span>Bolt.new</span>
+  </a>
+  <a class="stack-logo-link" href="https://vercel.com/docs" target="_blank" rel="noopener noreferrer" title="Vercel">
+    <span class="stack-logo-mark"><img src="https://cdn.simpleicons.org/vercel/000000" alt="" /></span>
+    <span>Vercel</span>
+  </a>
+</div>
+<hr />
+<h2>🤖 Organisation projet assistée par IA</h2>
+<p>Le projet a été mené comme une équipe multi-rôles, avec un pilotage humain central et des agents IA spécialisés selon les tâches.</p>
+<ul>
+<li><strong>Pilotage produit :</strong> cadrage et priorisation des exigences</li>
+<li><strong>Intégration front :</strong> génération/itération des composants UI</li>
+<li><strong>Debug :</strong> diagnostic des erreurs de rendu et de routage</li>
+<li><strong>Qualité :</strong> vérification build/lint et tests de parcours critiques</li>
+<li><strong>Déploiement :</strong> configuration Vercel, vérifications post-release</li>
+</ul>
+<p>Cette approche montre une capacité à orchestrer l’IA de manière opérationnelle, sans perdre la gouvernance projet.</p>
+<hr />
+<h2>👤 Rôle AMOA / Chef de Projet Digital</h2>
+<ul>
+<li>Recueil des besoins exprimés par le commanditaire unique (moi), puis déclinaison opérationnelle via agents IA par rôle</li>
+<li>Traduction des objectifs business en arborescence et parcours d’usage</li>
+<li>Formalisation des exigences fonctionnelles de contenu et de navigation</li>
+<li>Coordination de la conception et du delivery web</li>
+</ul>
+<hr />
+<h2>🧩 Démarche projet</h2>
+<h3>1. Cadrage UX et fonctionnel</h3>
+<ul>
+<li>Sessions de priorisation internes des messages clés et des hypothèses d’usage</li>
+<li>Définition des templates de pages et du modèle éditorial</li>
+<li>Préparation d’un backlog de livraison incrémentale</li>
+</ul>
+<h3>2. Pilotage de réalisation</h3>
+<ul>
+<li>Suivi des jalons de conception, intégration et validation</li>
+<li>Arbitrages entre contraintes de délai, qualité et cohérence de marque</li>
+<li>Contrôle de la conformité vis-à-vis du cadrage initial</li>
+</ul>
+<h3>3. Recette et amélioration continue</h3>
+<ul>
+<li>Scénarios de tests sur navigation, contenu et accessibilité</li>
+<li>Corrections priorisées selon impact sur l’expérience d’usage</li>
+<li>Préparation d’évolutions futures (bilingue, enrichissement contenu)</li>
+</ul>
+<hr />
+<h2>📈 Livrables et résultats</h2>
+<ul>
+<li>Architecture d’information claire et orientée usages</li>
+<li>Cadre de contenu réutilisable pour les futures pages</li>
+<li>Gouvernance éditoriale de base pour fiabiliser les mises à jour</li>
+<li>Support digital aligné avec le positionnement de l’entreprise</li>
+</ul>
+<p><strong>Démo en ligne :</strong> <a href="https://consortiumsi-fr.vercel.app/" target="_blank" rel="noopener noreferrer">consortiumsi-fr.vercel.app</a></p>
+<hr />
+<h2>✅ Compétences démontrées pour le poste</h2>
+<ul>
+<li>Recueil et structuration d’exigences en contexte commanditaire unique</li>
+<li>Pilotage d’un projet digital de bout en bout</li>
+<li>Rigueur de cadrage fonctionnel et suivi qualité</li>
+<li>Capacité à transformer la stratégie en expérience d’usage concrète</li>
+</ul>
+<hr />
+<div class="section-head-row">
+  <h2>🎬 Démo vidéo</h2>
+  <a class="media-link-btn" href="https://consortiumsi-fr.vercel.app/" target="_blank" rel="noopener noreferrer">Ouvrir la démo live</a>
+</div>
+<section class="demo-video-block demo-video-block--bottom">
+  <video class="use-case-video" controls autoplay muted loop playsinline preload="metadata" poster="../assets/images/logo-dj.png">
+    <source src="../assets/videos/Consortiumsi.fr/demo-video-csi.mkv" type="video/x-matroska" />
+    Votre navigateur ne supporte pas la lecture vidéo HTML5.
+  </video>
+  <p class="media-note"><strong>Vidéo démo - site institutionnel</strong></p>
+</section>
+<hr />
+<h2>🔐 Accès au code</h2>
+<p>Les POC et MVP associés à ce use case sont démontrables sur demande, avec présentation du fonctionnement concret (parcours, logique, livrables et critères de validation).</p>
+<div class="code-access-row">
+  <p class="code-access-email">📧 <a href="mailto:dominique.joguin@outlook.com">dominique.joguin@outlook.com</a></p>
+  <a class="code-access-github" href="https://github.com/CSIDJ/Consortiumsi.fr" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir le référentiel GitHub Consortium SI">
+    <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+      <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.65 7.65 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"></path>
+    </svg>
+  </a>
+</div>
       </article>
     </main>
   </div>
@@ -68,9 +249,10 @@
   <footer class="project-footer">
     <div class="project-shell">
       <span class="footer-left">© Dominique Joguin 2026</span>
-      <span class="footer-right">ver.21-02_12-15</span>
+      <span class="footer-right">ver.03-03_21-23</span>
     </div>
   </footer>
   <script src="../assets/js/project-nav.js"></script>
+  <script src="../assets/js/use-case-media.js"></script>
 </body>
 </html>

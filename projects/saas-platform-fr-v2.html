@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>🚀 Plateforme SaaS PM² Multi-Tenant (Prototype) — Portfolio 2026</title>
+  <link rel="stylesheet" href="../assets/css/project-pages.css" />
+</head>
+<body>
+  <header class="project-header">
+    <div class="project-shell">
+      <div class="project-brand">
+        <h1 class="project-name">Dominique Joguin</h1>
+        <p class="project-tagline">Chef de Projet Digital AMOA | IA, Data, Automatisation</p>
+      </div>
+    </div>
+  </header>
+
+  <section class="project-hero" aria-hidden="true">
+    <div class="project-hero-image"></div>
+  </section>
+
+  <div class="project-layout">
+    <aside class="project-sidebar">
+      <nav class="project-topnav">
+        <div class="project-nav-center">
+          <a href="../index.html">🏠 Accueil</a>
+          <a href="../profile-fr.html">👤 Profil</a>
+          <div class="uc-menu">
+            <span class="uc-toggle"><a class="uc-parent-link" href="../case-studies-fr.html">📚 Études de cas</a></span>
+            <ul class="uc-list">
+              <li><a href="./saas-platform-fr.html" aria-current="page">🚀 Plateforme SaaS PM² Multi-Tenant</a></li>
+              <li><a href="./budget-manager-fr.html">📊 Budget Manager</a></li>
+              <li><a href="./video-scanner-fr.html">🎬 Videos finder</a></li>
+              <li><a href="./copilot-pilot-iteration-fr.html">🧪 Tetris via GitHub Copilot</a></li>
+              <li><a href="./consortium-si-website-fr.html">🌐 Site institutionnel Consortium SI</a></li>
+              <li><a href="./credit-manager-poc-fr.html">💳 POC Credit Manager</a></li>
+                          <li><a href="#" class="uc-coming-soon" data-soon-text="En cours de réalisation">🧩 Expérimentation Serveur MCP</a></li>
+              <li><a href="#" class="uc-coming-soon" data-soon-text="En cours de réalisation">🤖 Agent via LangChain (Scrimba)</a></li>
+            <li><a href="./ai-orchestration-framework-fr.html">🤖 Framework IA</a></li>
+              </ul>
+          </div>
+          <a href="../cv-fr.html">📄 CV</a>
+          <a href="../dossier-fr.html">🧾 DCS</a>
+          <a href="https://www.linkedin.com/in/csidominiquejoguin/" target="_blank">💼 LinkedIn</a>
+          <a href="https://github.com/CSIDJ" target="_blank">🧑‍💻 GitHub</a>
+        </div>
+        <span class="project-actions"><a href="#" onclick="history.back(); return false;">↩ Retour</a> <a href="./saas-platform.html">🇬🇧 English</a></span>
+      </nav>
+    </aside>
+
+    <main class="page-content">
+      <article class="use-case-article">
+        <h1>🚀 Plateforme SaaS PM² Multi-Tenant (Prototype)</h1>
+
+        <h2>🎯 Contexte &amp; enjeu</h2>
+        <p>Ce projet vise à transformer une logique métier de gestion de projet (PM²) en plateforme SaaS exploitable : authentification, gestion des rôles, données métier, parcours utilisateur et cadre d’exploitation.</p>
+        <p>L’enjeu était de concilier vitesse d’exécution (MVP démontrable) et robustesse technique pour préparer une V1 industrialisée.</p>
+
+        <hr />
+
+        <div class="section-head-row">
+          <h2>🖼 Captures d'écran</h2>
+          <a href="#" class="media-cta-link">Ouvrir la démo live</a>
+        </div>
+        <div class="use-case-media use-case-media--slider-only">
+          <section class="demo-shot-block">
+            <h3>Captures d'écran (slider)</h3>
+            <p class="media-status-pill">En cours de réalisation</p>
+          </section>
+        </div>
+
+        <hr />
+
+        <h2>🧪 Positionnement original du use case</h2>
+        <p>Le projet a servi de cas complet pour tester un pilotage digital avec une équipe hybride : pilotage humain + exécution assistée par agents IA spécialisés.</p>
+        <ul>
+          <li>Prototypage et itérations sur bolt.new et StackBlitz</li>
+          <li>Développement, debug et intégration dans VS Code</li>
+          <li>Versioning, branches et gouvernance via GitHub</li>
+          <li>Validation opérationnelle en local puis préparation démo en ligne</li>
+        </ul>
+        <p>Ce cas démontre une orchestration de bout en bout, au-delà de la seule génération de code.</p>
+
+        <hr />
+
+        <h2>🧭 Phases préliminaires (avant audit technique)</h2>
+        <h3>1. Cadrage documentaire initial</h3>
+        <ul>
+          <li>Consolidation des documents d’initialisation (architecture, directives, business model, workflow Git)</li>
+          <li>Alignement sur la méthodologie PM² pour structurer la gouvernance projet</li>
+          <li>Définition d’une trajectoire incrémentale : MVP puis V1</li>
+        </ul>
+
+        <h3>2. Vision architecture cible</h3>
+        <ul>
+          <li>Architecture SaaS modulaire, multi-tenant (1 tenant = 1 organisation), API-first</li>
+          <li>Socle sécurité prévu : Auth, RBAC, RLS, isolation des données</li>
+          <li>Préparation de l’extensibilité (modules, documents, intégrations futures)</li>
+        </ul>
+
+        <h3>3. Cadrage fonctionnel &amp; business</h3>
+        <ul>
+          <li>Formalisation des parcours d’usage prioritaires</li>
+          <li>Préparation du modèle d’abonnement par niveaux (Essai, Niveau 1, 2, 3)</li>
+          <li>Lien explicite entre offre commerciale et fonctionnalités activables</li>
+        </ul>
+
+        <h3>4. Gouvernance delivery</h3>
+        <ul>
+          <li>Workflow Git cible : main / develop / feature / release / hotfix</li>
+          <li>Organisation des itérations et critères de validation</li>
+          <li>Base de pilotage qualité/documentation pour industrialisation progressive</li>
+        </ul>
+
+        <hr />
+
+        <h2>🛠 Phase de reprise (audit, stabilisation, remise au vert)</h2>
+        <ul>
+          <li>Audit technico-fonctionnel du MVP et comparaison avec la cible documentaire</li>
+          <li>Correction des blocages critiques (auth, build, migrations, run local)</li>
+          <li>Restauration Supabase sur nouveau projet et revalidation des flux</li>
+          <li>Mise en place CI minimale (lint/build), script de check DB et runbook d’exploitation</li>
+        </ul>
+
+        <hr />
+
+        <h2>🏗 Ancrage technique (version réalisée)</h2>
+        <ul>
+          <li>Front-end : React + Vite + TypeScript + Tailwind CSS</li>
+          <li>Backend/Data/Auth : Supabase (PostgreSQL, Auth, RLS, Storage)</li>
+          <li>Contrôle d’accès : rôles user/admin/superadmin, policies RLS</li>
+          <li>Qualité : lint, build, checks post-migration, workflow de branches</li>
+          <li>Roadmap V1 versionnée avec décision d’architecture explicite</li>
+        </ul>
+
+        <hr />
+
+        <h2>🤖 Organisation projet assistée par IA</h2>
+        <p>Les agents IA ont été mobilisés par spécialité, sous pilotage AMOA/Chef de projet :</p>
+        <ul>
+          <li><strong>Cadrage</strong> : structuration des exigences et priorités</li>
+          <li><strong>Architecture</strong> : cohérence schéma data, auth, sécurité</li>
+          <li><strong>Développement</strong> : correctifs et implémentations ciblées</li>
+          <li><strong>QA</strong> : validation des parcours critiques (signup/login/roles)</li>
+          <li><strong>Ops</strong> : CI, scripts de contrôle, runbook</li>
+        </ul>
+
+        <hr />
+
+        <h2>👤 Rôle AMOA / Chef de Projet Digital</h2>
+        <ul>
+          <li>Définition du cap produit et arbitrage des priorités</li>
+          <li>Traduction du besoin métier en backlog actionnable</li>
+          <li>Orchestration des contributions IA et contrôle de cohérence globale</li>
+          <li>Pilotage des incidents (repo, branches, base, auth, release)</li>
+          <li>Validation des livrables et préparation des étapes V1</li>
+        </ul>
+
+        <hr />
+
+        <h2>🧩 Démarche projet (synthèse)</h2>
+        <h3>1. Cadrage</h3>
+        <ul>
+          <li>Analyse des besoins et des hypothèses d’usage</li>
+          <li>Définition du périmètre MVP et des critères d’acceptation</li>
+        </ul>
+
+        <h3>2. Delivery incrémental</h3>
+        <ul>
+          <li>Itérations rapides outillées IA + revues de cohérence</li>
+          <li>Traitement prioritaire des risques techniques</li>
+        </ul>
+
+        <h3>3. Stabilisation</h3>
+        <ul>
+          <li>Audit, corrections, tests de run, validation DB/auth</li>
+          <li>Mise en place d’un cadre de qualité exploitable en continu</li>
+        </ul>
+
+        <h3>4. Préparation V1</h3>
+        <ul>
+          <li>Plan de développement sprintisé</li>
+          <li>Décision stratégique : V1 sur stack actuelle, migration future sur critères</li>
+        </ul>
+
+        <hr />
+
+        <h2>📈 Livrables et résultats</h2>
+        <ul>
+          <li>MVP SaaS fonctionnel et démontrable</li>
+          <li>Auth stabilisée (email + username) et profils synchronisés</li>
+          <li>Migrations SQL fiabilisées + trigger de création de profil</li>
+          <li>Pipeline CI opérationnel (lint/build)</li>
+          <li>Script de vérification post-migration DB</li>
+          <li>Runbook restore/checks + plan de dev V1 versionné</li>
+        </ul>
+
+        <hr />
+
+        <h2>✅ Compétences démontrées pour le poste</h2>
+        <ul>
+          <li>Pilotage projet digital end-to-end</li>
+          <li>Gestion multi-outils et coordination d’équipe IA par rôles</li>
+          <li>Résolution d’incidents complexes avec maintien du delivery</li>
+          <li>Capacité à relier stratégie produit, exécution technique et qualité</li>
+          <li>Communication claire pour interlocuteurs techniques et non techniques</li>
+        </ul>
+
+        <hr />
+
+        <div class="section-head-row">
+          <h2>🎬 Démo vidéo</h2>
+          <a href="#" class="media-cta-link">Ouvrir la démo live</a>
+        </div>
+        <section class="demo-video-block demo-video-block--bottom">
+          <h3>Vidéo courte (boucle)</h3>
+          <p class="media-status-pill">En cours de réalisation</p>
+        </section>
+
+        <hr />
+
+        <h2>🔐 Accès au code</h2>
+        <p>Les POC/MVP et éléments de démonstration sont présentables sur demande : parcours utilisateurs, logique métier, scripts de contrôle, gouvernance Git et livrables de pilotage.</p>
+        <div class="code-access-row">
+          <p class="code-access-email">📧 <a href="mailto:dominique.joguin@outlook.com">dominique.joguin@outlook.com</a></p>
+          <a class="code-access-github" href="https://github.com/CSIDJ" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir le profil GitHub">
+            <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+              <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.65 7.65 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"></path>
+            </svg>
+          </a>
+        </div>
+      </article>
+    </main>
+  </div>
+
+  <footer class="project-footer">
+    <div class="project-shell">
+      <span class="footer-left">© Dominique Joguin 2026</span>
+      <span class="footer-right">ver.03-03_21-23</span>
+    </div>
+  </footer>
+  <script src="../assets/js/project-nav.js"></script>
+  <script src="../assets/js/use-case-media.js"></script>
+</body>
+</html>

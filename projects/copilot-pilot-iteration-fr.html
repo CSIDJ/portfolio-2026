@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>🧪 Itération pilote IA (GitHub Copilot) — Portfolio 2026</title>
+  <title>🧪 Tetris via GitHub Copilot (POC) — Portfolio 2026</title>
   <link rel="stylesheet" href="../assets/css/project-pages.css" />
 </head>
 <body>
@@ -11,7 +11,7 @@
     <div class="project-shell">
       <div class="project-brand">
         <h1 class="project-name">Dominique Joguin</h1>
-        <p class="project-tagline">Directeur de Programme augmente par l'IA | Architecte Produit & Gouvernance</p>
+        <p class="project-tagline">Chef de Projet Digital AMOA | IA, Data, Automatisation</p>
       </div>
     </div>
   </header>
@@ -29,13 +29,16 @@
           <div class="uc-menu">
             <span class="uc-toggle"><a class="uc-parent-link" href="../case-studies-fr.html">📚 Études de cas</a></span>
             <ul class="uc-list">
-              <li><a href="./saas-platform-fr.html">🚀 Plateforme SaaS</a></li>
+              <li><a href="./saas-platform-fr.html">🚀 Plateforme SaaS PM² Multi-Tenant</a></li>
               <li><a href="./budget-manager-fr.html">📊 Budget Manager</a></li>
-              <li><a href="./video-scanner-fr.html">🎬 Outil Vidéo</a></li>
-              <li><a href="./copilot-pilot-iteration-fr.html" aria-current="page">🧪 Itération pilote IA (GitHub Copilot)</a></li>
+              <li><a href="./video-scanner-fr.html">🎬 Videos finder</a></li>
+              <li><a href="./copilot-pilot-iteration-fr.html" aria-current="page">🧪 Tetris via GitHub Copilot</a></li>
               <li><a href="./consortium-si-website-fr.html">🌐 Site institutionnel Consortium SI</a></li>
-              <li><a href="./ai-orchestration-framework-fr.html">🤖 Framework IA</a></li>
-            </ul>
+              <li><a href="./credit-manager-poc-fr.html">💳 POC Credit Manager</a></li>
+                          <li><a href="#" class="uc-coming-soon" data-soon-text="En cours de réalisation">🧩 Expérimentation Serveur MCP</a></li>
+              <li><a href="#" class="uc-coming-soon" data-soon-text="En cours de réalisation">🤖 Agent via LangChain (Scrimba)</a></li>
+            <li><a href="./ai-orchestration-framework-fr.html">🤖 Framework IA</a></li>
+              </ul>
           </div>
           <a href="../cv-fr.html">📄 CV</a>
           <a href="../dossier-fr.html">🧾 DCS</a>
@@ -46,21 +49,129 @@
       </nav>
     </aside>
     <main class="page-content">
-      <article>
-<h1>🧪 Itération pilote IA (GitHub Copilot)</h1>
-<h2>🎯 Objectif</h2>
-<p>Préparer un premier cycle d'implémentation assisté par IA avec GitHub Copilot pour améliorer la vélocité tout en conservant un cadre d’architecture maîtrisé.</p>
+      <article class="use-case-article">
+<h1>🧪 Tetris via GitHub Copilot (POC)</h1>
+<h2>🎯 Contexte &amp; enjeu</h2>
+<p>Ce use case présente un pilote IA centré sur le développement rapide d’un MVP autour du jeu Tetris, afin de tester la chaîne de delivery sans dégrader la qualité ni la gouvernance.</p>
+<p>L’objectif AMOA est de décider de l’industrialisation sur la base de critères mesurables, et non d’effets d’annonce.</p>
 <hr />
-<h2>🏗 Périmètre de livraison</h2>
+<div class="section-head-row">
+  <h2>🖼 Captures d'écran</h2>
+</div>
+<div class="use-case-media use-case-media--slider-only">
+  <section class="demo-shot-block">
+    <div class="shot-slider" data-shot-slider>
+      <div class="shot-slider-track">
+        <figure class="shot-slide is-active">
+          <img src="../assets/images/Copilot_Tetris/Screenshot%20From%202026-02-27%2010-10-18.png" alt="Capture Tetris Copilot: interface de jeu" loading="lazy" />
+          <figcaption>Interface MVP Tetris (vue de jeu).</figcaption>
+        </figure>
+        <figure class="shot-slide">
+          <img src="../assets/images/Copilot_Tetris/Screenshot%20From%202026-02-27%2010-10-47.png" alt="Capture Tetris Copilot: progression de partie" loading="lazy" />
+          <figcaption>Progression de partie et comportement du MVP.</figcaption>
+        </figure>
+      </div>
+      <div class="shot-slider-controls">
+        <button type="button" class="shot-nav prev" data-slide-prev aria-label="Capture précédente">◀</button>
+        <div class="shot-dots" data-slide-dots></div>
+        <button type="button" class="shot-nav next" data-slide-next aria-label="Capture suivante">▶</button>
+      </div>
+    </div>
+  </section>
+</div>
+<hr />
+<h2>🧪 Positionnement original du use case</h2>
+<p>Le périmètre initial dépassait l’outil Copilot seul: l’objectif était de valider un modèle de rôles IA interopérables sur une chaîne complète de gestion de projet.</p>
 <ul>
-<li>Socle outillage et garde-fous</li>
-<li>Conventions de prompting et workflow de code</li>
-<li>Boucles de validation et points de contrôle qualité</li>
-<li>Retours développeur et métriques d’itération</li>
+<li>Cas support principal: MVP Tetris (boucle courte idéation-développement-validation)</li>
+<li>Comparaison de comportements entre GPTs OpenAI, Projects Perplexity, Gemini CLI, Claude, Roo Code, OpenRouter et Bolt.new</li>
+<li>Répartition des expertises (stratégie, exécution, revue, QA, documentation)</li>
+<li>Optimisation continue des custom instructions et des critères de validation</li>
+</ul>
+<p>Dans ce use case, les rôles projet sont assurés par des agents IA préconfigurés, pas par une équipe humaine opérationnelle.</p>
+<hr />
+<h2>🏗 Ancrage technique (version originale)</h2>
+<ul>
+<li>MVP Tetris développé en itérations courtes pour mesurer vitesse/qualité</li>
+<li>Conventions de prompting et structure de demandes par phase de projet</li>
+<li>Boucles de revue/correction avec points de contrôle qualité</li>
+<li>Journal d’itération pour tracer décisions, écarts et corrections</li>
+<li>Socle réutilisable pour d’autres use cases (simples et complexes)</li>
 </ul>
 <hr />
-<h2>📌 Statut actuel</h2>
-<p>Structure initiale prête. Le contenu détaillé et les résultats mesurés seront complétés dans la prochaine itération.</p>
+<h2>👤 Rôle AMOA / Chef de Projet Digital</h2>
+<ul>
+<li>Définition des cas d’usage éligibles et des limites d’usage</li>
+<li>Formalisation des critères de succès (qualité, délai, réutilisabilité, risques)</li>
+<li>Organisation des boucles d’évaluation entre rôles métier et technique simulés par agents IA</li>
+<li>Pilotage des arbitrages entre gains rapides et exigences de conformité</li>
+</ul>
+<hr />
+<h2>🧩 Démarche de pilotage du POC</h2>
+<h3>1. Cadrage</h3>
+<ul>
+<li>Définition du périmètre, des livrables et des scénarios d’essai</li>
+<li>Préparation d’un cadre documentaire et d’un journal de décisions</li>
+</ul>
+<h3>2. Exécution</h3>
+<ul>
+<li>Cycles courts d’expérimentation (prompting, revue, correction, validation)</li>
+<li>Contrôle qualité systématique avant intégration des contributions IA</li>
+<li>Capitalisation des patterns efficaces et des points de vigilance</li>
+</ul>
+<h3>3. Évaluation</h3>
+<ul>
+<li>Mesure des gains de productivité et de robustesse</li>
+<li>Analyse des risques (erreurs, biais, dette documentaire)</li>
+<li>Recommandations de généralisation progressive</li>
+</ul>
+<hr />
+<h2>🔄 Conduite du changement</h2>
+<ul>
+<li>Documentation de bonnes pratiques d’usage IA</li>
+<li>Sensibilisation à la validation humaine obligatoire avant toute mise en usage</li>
+<li>Préparation d’un mode opératoire reproductible pour d’autres contextes projet</li>
+</ul>
+<hr />
+<h2>📈 Livrables et résultats</h2>
+<ul>
+<li>Cadre de gouvernance IA projet (règles, contrôles, traçabilité)</li>
+<li>Référentiel de prompts et pratiques validées</li>
+<li>Bilan POC avec critères de décision pour passage à l’échelle</li>
+</ul>
+<hr />
+<h2>✅ Compétences démontrées pour le poste</h2>
+<ul>
+<li>Pilotage d’un POC IA orienté valeur métier</li>
+<li>Capacité à structurer la décision avec des indicateurs concrets</li>
+<li>Rigueur de gouvernance et maîtrise des risques</li>
+<li>Animation transverse entre innovation et delivery opérationnel</li>
+</ul>
+<hr />
+<div class="section-head-row">
+  <h2>🎬 Démo vidéo</h2>
+</div>
+<section class="demo-video-block demo-video-block--bottom">
+  <h3>Vidéo courte (boucle)</h3>
+  <video class="use-case-video" controls autoplay loop muted playsinline preload="metadata">
+    <source src="../assets/videos/Copilot_Tetris/Tetris-trimmed.mp4" type="video/mp4" />
+    <source src="../assets/videos/Copilot_Tetris/Tetris-trimmed.wmv" type="video/x-ms-wmv" />
+    Votre navigateur ne prend pas en charge ce format.
+  </video>
+  <p class="media-note">Si la vidéo ne se lance pas dans le navigateur: <a href="../assets/videos/Copilot_Tetris/Tetris-trimmed.mp4" target="_blank" rel="noopener noreferrer">ouvrir la vidéo</a></p>
+  <p class="media-note">Post LinkedIn correspondant: <a href="https://www.linkedin.com/pulse/red%C3%A9couvrir-les-joies-de-tetris-un-voyage-dans-le-temps-joguin-ozy0e/" target="_blank">voir la publication</a></p>
+</section>
+<hr />
+<h2>🔐 Accès au code</h2>
+<p>Les POC et MVP associés à ce use case sont démontrables sur demande, avec présentation du fonctionnement concret (parcours, logique, livrables et critères de validation).</p>
+<div class="code-access-row">
+  <p class="code-access-email">📧 <a href="mailto:dominique.joguin@outlook.com">dominique.joguin@outlook.com</a></p>
+  <a class="code-access-github" href="https://github.com/CSIDJ" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir le profil GitHub">
+    <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+      <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.65 7.65 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"></path>
+    </svg>
+  </a>
+</div>
       </article>
     </main>
   </div>
@@ -68,9 +179,10 @@
   <footer class="project-footer">
     <div class="project-shell">
       <span class="footer-left">© Dominique Joguin 2026</span>
-      <span class="footer-right">ver.21-02_12-15</span>
+      <span class="footer-right">ver.03-03_21-23</span>
     </div>
   </footer>
   <script src="../assets/js/project-nav.js"></script>
+  <script src="../assets/js/use-case-media.js"></script>
 </body>
 </html>

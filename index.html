@@ -11,6 +11,12 @@
   --border:#e5e7eb;
   --text:#111827;
   --muted:#374151;
+  --logo-blue-deep:#0f3d82;
+  --logo-blue:#1f6fb1;
+  --logo-cyan:#15b9d5;
+  --logo-teal:#0a8ea2;
+  --blue-gray:#5f738a;
+  --note-red:#dc2626;
 }
 
 body{
@@ -24,24 +30,39 @@ body{
 }
 
 header{
-  padding:60px 20px 30px;
+  padding:52px 20px 28px;
   text-align:center;
   border-bottom:1px solid var(--border);
 }
 
 h1{
   margin:0;
-  font-size:34px;
+  font-size:56px;
+  line-height:1.08;
 }
 
 .tagline{
-  margin-top:8px;
-  font-weight:600;
+  margin:0;
+  font-weight:700;
   color:var(--muted);
+  line-height:1.3;
+}
+
+.tagline-top{
+  margin-top:16px;
+  color:var(--logo-blue);
+  font-size:clamp(18px,1.5vw,24px);
+}
+
+.tagline-bottom{
+  max-width:min(980px,88vw);
+  font-size:clamp(14px,1vw,18px);
+  font-weight:500;
+  color:var(--blue-gray);
 }
 
 .portfolio-kicker{
-  margin-top:10px;
+  margin-top:12px;
   font-size:13px;
   letter-spacing:.14em;
   text-transform:uppercase;
@@ -55,7 +76,15 @@ h1{
   display:flex;
   justify-content:center;
   align-items:center;
-  padding:60px 20px;
+  padding:42px 20px 60px;
+}
+
+.hero-stack{
+  width:min(1080px,100%);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:38px;
 }
 
 /* Wrapper : masque pour arrondis (overlay + blur alignés) */
@@ -69,7 +98,7 @@ h1{
 
 /* Image */
 .medallion{
-  width:min(720px,80vw);
+  width:min(640px,74vw);
   height:auto;
   display:block;
   transition:filter .45s ease, transform .45s ease;
@@ -85,8 +114,11 @@ h1{
   justify-content:center;
   font-size:22px;
   font-weight:600;
+  padding:24px 28px;
+  line-height:1.85;
+  white-space:normal;
   color:#fff;
-  background:rgba(17,24,39,0.35);
+  background:rgba(17,24,39,0.55);
   opacity:0;
   transition:opacity .35s ease, transform .35s ease;
   text-align:center;
@@ -106,11 +138,36 @@ h1{
   transform:translateY(0);
 }
 
+.medallion-wrapper.is-entering .medallion{
+  filter:grayscale(100%) blur(3px);
+  transform:scale(1.015);
+}
+
+.medallion-wrapper.is-entering .enter-label{
+  opacity:1;
+  transform:translateY(0);
+  font-size:17px;
+}
+
+.enter-label.is-note{
+  flex-direction:column;
+  gap:12px;
+}
+
+.enter-note-line{
+  display:block;
+}
+
+.enter-note-lead{
+  color:#f87171;
+  font-weight:700;
+}
+
 /* Mobile / touch (pas de hover) : texte visible en permanence */
 @media (hover:none){
   .enter-label{
     opacity:1;
-    background:rgba(17,24,39,0.25);
+    background:rgba(17,24,39,0.5);
     font-size:18px;
     transform:none;
     backdrop-filter: blur(2px); /* option premium, fallback OK si non supporté */
@@ -118,7 +175,7 @@ h1{
 }
 
 nav{
-  padding:20px;
+  padding:16px 20px 18px;
   border-top:1px solid var(--border);
   text-align:center;
 }
@@ -151,10 +208,105 @@ footer{
   gap:12px;
 }
 
+.home-note-popup{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  width:min(430px,calc(100vw - 28px));
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:12px;
+  box-shadow:0 8px 26px rgba(15,23,42,.14);
+  padding:12px 14px;
+  z-index:1000;
+}
+
+.home-note-popup.is-hidden{
+  display:none;
+}
+
+.home-note-close{
+  position:absolute;
+  top:8px;
+  right:8px;
+  width:28px;
+  height:28px;
+  border:1px solid var(--border);
+  border-radius:999px;
+  background:#fff;
+  color:#374151;
+  cursor:pointer;
+  font-size:16px;
+  line-height:1;
+}
+
+.home-note-close:hover{
+  background:#f9fafb;
+}
+
+.home-note-title{
+  margin:0 34px 6px 0;
+  font-size:14px;
+  font-weight:700;
+  color:#111827;
+}
+
+.home-note-text{
+  margin:0;
+  font-size:13px;
+  line-height:1.85;
+  color:#374151;
+}
+
+.home-note-text + .home-note-text{
+  margin-top:12px;
+}
+
+.home-note-text--lead{
+  color:var(--note-red);
+  font-weight:700;
+}
+
 @media (max-width:860px){
+  header{
+    padding:44px 16px 24px;
+  }
+
+  h1{
+    font-size:clamp(40px,8vw,50px);
+  }
+
+  .hero{
+    padding:30px 14px 44px;
+  }
+
+  .hero-stack{
+    gap:30px;
+  }
+
+  .medallion{
+    width:min(600px,88vw);
+  }
+
+  .tagline-top{
+    margin-top:14px;
+    font-size:clamp(17px,4.2vw,22px);
+  }
+
+  .tagline-bottom{
+    font-size:clamp(13px,3vw,17px);
+    max-width:min(720px,92vw);
+  }
+
   .footer-row{
     flex-direction:column;
     align-items:center;
+  }
+
+  .home-note-popup{
+    right:10px;
+    bottom:10px;
+    width:min(430px,calc(100vw - 20px));
   }
 }
 </style>
@@ -166,28 +318,32 @@ footer{
 <header>
   <h1 data-i18n="name">Dominique Joguin</h1>
   <p class="portfolio-kicker">Portfolio 2026</p>
-
-  <p class="tagline" data-i18n="tagline_fr">
-    Directeur de Programme augmenté par l’IA | Architecte Produit & Gouvernance
-  </p>
-
-  <p class="tagline" data-i18n="tagline_en">
-    AI-Augmented Program Director | Product & Governance Architect
-  </p>
+  <p class="tagline tagline-top lang-fr">Pilotage de projets avec l’IA</p>
+  <p class="tagline tagline-top lang-en">AI-Driven Project Leadership</p>
 </header>
 
 <main class="hero">
-  <a id="portfolio-link" class="medallion-wrapper" href="#">
-    <img
-      class="medallion"
-      src="./assets/images/medallion.png?v=4"
-      alt="Entrer dans le portfolio Dominique Joguin"
-    />
+  <div class="hero-stack">
+    <a id="portfolio-link" class="medallion-wrapper" href="#">
+      <img
+        class="medallion"
+        src="./assets/images/medallion.png?v=4"
+        alt="Entrer dans le portfolio Dominique Joguin"
+      />
 
-    <span class="enter-label" data-i18n="enter_portfolio">
-      Entrer dans le portfolio
-    </span>
-  </a>
+      <span class="enter-label" data-i18n="enter_portfolio">
+        Entrer dans le portfolio
+      </span>
+    </a>
+
+    <p class="tagline tagline-bottom lang-fr">
+      De l’idée à la mise en œuvre concrète : POC, prototypes, MVP jusqu’à la V1.
+    </p>
+
+    <p class="tagline tagline-bottom lang-en">
+      From idea to concrete delivery: POC, prototypes, MVP through V1.
+    </p>
+  </div>
 </main>
 
 <nav>
@@ -200,9 +356,19 @@ footer{
 <footer>
   <div class="footer-row">
     <span>© Dominique Joguin 2026</span>
-    <span>ver.21-02_12-15</span>
+    <span>ver.03-03_21-23</span>
   </div>
 </footer>
+
+<aside id="home-note-popup" class="home-note-popup is-hidden" role="dialog" aria-label="Portfolio note">
+  <button id="home-note-close" class="home-note-close" type="button" aria-label="Fermer">×</button>
+  <p class="home-note-title lang-fr">Note portfolio</p>
+  <p class="home-note-title lang-en">Portfolio note</p>
+  <p class="home-note-text home-note-text--lead lang-fr">Le design de ce portfolio est volontairement basique.</p>
+  <p class="home-note-text lang-fr">L'objectif principal est d'exposer le travail et les compétences en gestion de projet, ainsi que les expérimentations autour des LLM.</p>
+  <p class="home-note-text home-note-text--lead lang-en">This portfolio intentionally uses a basic design.</p>
+  <p class="home-note-text lang-en">The primary goal is to showcase project management work and skills, as well as experimentation around LLMs.</p>
+</aside>
 
 <script>
 (function(){
@@ -226,6 +392,8 @@ const t=isFR
   nav_cv:"CV",
   nav_linkedin:"LinkedIn",
   enter_portfolio:"Entrer dans le portfolio",
+  home_note_line_1:"Le design de ce portfolio est volontairement basique.",
+  home_note_line_2:"L'objectif principal est d'exposer le travail et les compétences en gestion de projet, ainsi que les expérimentations autour des LLM.",
   footer_name:"Dominique Joguin"
 }
 :{
@@ -235,6 +403,8 @@ const t=isFR
   nav_cv:"Resume",
   nav_linkedin:"LinkedIn",
   enter_portfolio:"Enter portfolio",
+  home_note_line_1:"This portfolio intentionally uses a basic design.",
+  home_note_line_2:"The primary goal is to showcase project management work and skills, as well as experimentation around LLMs.",
   footer_name:"Dominique Joguin"
 };
 
@@ -245,25 +415,54 @@ document.querySelectorAll("[data-i18n]").forEach(el=>{
   if(t[key]) el.textContent=t[key];
 });
 
-const frTag=document.querySelector('[data-i18n="tagline_fr"]');
-const enTag=document.querySelector('[data-i18n="tagline_en"]');
+document.querySelectorAll(".lang-fr").forEach(el=>{
+  el.style.display=isFR?"":"none";
+});
 
-if(frTag&&enTag){
-  frTag.style.display=isFR?"":"none";
-  enTag.style.display=isFR?"none":"";
-}
+document.querySelectorAll(".lang-en").forEach(el=>{
+  el.style.display=isFR?"none":"";
+});
 
 document.documentElement.lang=isFR?"fr":"en";
 
 /* lien dynamique */
 const portfolioLink=document.getElementById("portfolio-link");
+const enterLabel=portfolioLink?portfolioLink.querySelector(".enter-label"):null;
+const profilePath=isFR?"./profile-fr.html":"./profile-en.html";
+let portfolioRedirectTimer=null;
 if(portfolioLink){
-  portfolioLink.href=isFR?"./profile-fr.html":"./profile-en.html";
+  portfolioLink.href=profilePath;
+  portfolioLink.addEventListener("click", function(event){
+    event.preventDefault();
+    if(portfolioLink.classList.contains("is-entering")){
+      if(portfolioRedirectTimer){
+        window.clearTimeout(portfolioRedirectTimer);
+      }
+      window.location.href=profilePath;
+      return;
+    }
+    portfolioLink.classList.add("is-entering");
+    if(enterLabel){
+      enterLabel.classList.add("is-note");
+      enterLabel.innerHTML='<span class="enter-note-line enter-note-lead">'+t.home_note_line_1+'</span><span class="enter-note-line">'+t.home_note_line_2+'</span>';
+    }
+    portfolioRedirectTimer=window.setTimeout(function(){
+      window.location.href=profilePath;
+    }, 10000);
+  });
 }
 
 const cvLink=document.getElementById("nav-cv");
 if(cvLink){
   cvLink.href=isFR?"./cv-fr.html":"./cv-en.html";
+}
+
+const noteClose=document.getElementById("home-note-close");
+const notePopup=document.getElementById("home-note-popup");
+if(noteClose && notePopup){
+  noteClose.addEventListener("click", function(){
+    notePopup.classList.add("is-hidden");
+  });
 }
 
 })();

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>📊 Budget Manager — Local-First Application — Portfolio 2026</title>
+  <title>📊 Budget Manager (V1) — Portfolio 2026</title>
   <link rel="stylesheet" href="../assets/css/project-pages.css" />
 </head>
 <body>
@@ -11,7 +11,7 @@
     <div class="project-shell">
       <div class="project-brand">
         <h1 class="project-name">Dominique Joguin</h1>
-        <p class="project-tagline">AI-Orchestrated Program Director | Product & Governance Architect</p>
+        <p class="project-tagline">Digital Project Manager and Business Analyst | AI, Data, Automation</p>
       </div>
     </div>
   </header>
@@ -29,13 +29,15 @@
           <div class="uc-menu">
             <span class="uc-toggle"><a class="uc-parent-link" href="../case-studies.html">📚 Case Studies</a></span>
             <ul class="uc-list">
-              <li><a href="./saas-platform.html">🚀 SaaS Platform</a></li>
+              <li><a href="./saas-platform.html">🚀 PM2 Multi-Tenant SaaS Platform</a></li>
               <li><a href="./budget-manager.html" aria-current="page">📊 Budget Manager</a></li>
-              <li><a href="./video-scanner.html">🎬 Video Automation Tool</a></li>
-              <li><a href="./copilot-pilot-iteration.html">🧪 AI Pilot Iteration (GitHub Copilot)</a></li>
+              <li><a href="./video-scanner.html">🎬 Videos finder</a></li>
+              <li><a href="./copilot-pilot-iteration.html">🧪 Tetris via GitHub Copilot</a></li>
               <li><a href="./consortium-si-website.html">🌐 Consortium SI Corporate Website</a></li>
-              <li><a href="./ai-orchestration-framework.html">🤖 AI Delivery Framework</a></li>
-            </ul>
+                          <li><a href="#" class="uc-coming-soon" data-soon-text="In progress">🧩 MCP Server Experimentation</a></li>
+              <li><a href="#" class="uc-coming-soon" data-soon-text="In progress">🤖 LangChain Agent (Scrimba)</a></li>
+            <li><a href="./ai-orchestration-framework.html">🤖 AI Framework</a></li>
+              </ul>
           </div>
           <a href="../cv-en.html">📄 Resume</a>
           <a href="../dossier-en.html">🧾 Skills Dossier</a>
@@ -46,8 +48,8 @@
       </nav>
     </aside>
     <main class="page-content">
-      <article>
-<h1>📊 Budget Manager — Local-First Application</h1>
+      <article class="use-case-article">
+<h1>📊 Budget Manager (V1)</h1>
 <h2>🎯 Objective</h2>
 <p>Design and deliver a local-first budgeting application focused on structured state management, persistence, and Linux-native deployment.</p>
 <p><strong>This project served as:</strong></p>
@@ -56,6 +58,52 @@
 <li>A practical experimentation ground for UI-state architecture</li>
 <li>A packaging &amp; distribution exercise</li>
 </ul>
+<hr />
+<div class="section-head-row">
+  <h2>🖼 Screenshots</h2>
+</div>
+<div class="use-case-media use-case-media--slider-only">
+  <section class="demo-shot-block">
+    <h3>Screenshots</h3>
+    <div class="shot-slider" data-shot-slider>
+      <div class="shot-slider-track">
+        <figure class="shot-slide is-active">
+          <img src="../assets/images/Budget_Manager/accueil-budget.png" alt="Budget Manager screenshot: budget home" loading="lazy" />
+          <figcaption>Screen: Budget home</figcaption>
+        </figure>
+        <figure class="shot-slide">
+          <img src="../assets/images/Budget_Manager/compte-lecture-rapide.png" alt="Budget Manager screenshot: quick account view" loading="lazy" />
+          <figcaption>Screen: Quick account view</figcaption>
+        </figure>
+        <figure class="shot-slide">
+          <img src="../assets/images/Budget_Manager/cr%C3%A9ation-%C3%A9ch%C3%A9ancier.png" alt="Budget Manager screenshot: schedule creation" loading="lazy" />
+          <figcaption>Screen: Schedule creation</figcaption>
+        </figure>
+        <figure class="shot-slide">
+          <img src="../assets/images/Budget_Manager/gestion-cr%C3%A9ation-op%C3%A9ration.png" alt="Budget Manager screenshot: operation creation" loading="lazy" />
+          <figcaption>Screen: Operation creation</figcaption>
+        </figure>
+        <figure class="shot-slide">
+          <img src="../assets/images/Budget_Manager/gestion-suivi-compte.png" alt="Budget Manager screenshot: account tracking" loading="lazy" />
+          <figcaption>Screen: Account tracking</figcaption>
+        </figure>
+        <figure class="shot-slide">
+          <img src="../assets/images/Budget_Manager/gestion-suivi-%C3%A9ch%C3%A9ancier.png" alt="Budget Manager screenshot: schedule tracking" loading="lazy" />
+          <figcaption>Screen: Schedule tracking</figcaption>
+        </figure>
+        <figure class="shot-slide">
+          <img src="../assets/images/Budget_Manager/sidebar.png" alt="Budget Manager screenshot: side navigation" loading="lazy" />
+          <figcaption>Screen: Side navigation</figcaption>
+        </figure>
+      </div>
+      <div class="shot-slider-controls">
+        <button type="button" class="shot-nav prev" data-slide-prev aria-label="Previous screenshot">◀</button>
+        <div class="shot-dots" data-slide-dots></div>
+        <button type="button" class="shot-nav next" data-slide-next aria-label="Next screenshot">▶</button>
+      </div>
+    </div>
+  </section>
+</div>
 <hr />
 <h2>🏗 Architecture Overview</h2>
 <p><strong>Frontend Layer:</strong></p>
@@ -127,9 +175,28 @@
 <li>Controlled AI orchestration</li>
 </ul>
 <hr />
+<div class="section-head-row">
+  <h2>🎬 Demo Video</h2>
+</div>
+<section class="demo-video-block demo-video-block--bottom">
+  <h3>Short looping video</h3>
+  <video class="use-case-video" controls autoplay loop muted playsinline preload="metadata">
+    <source src="../assets/videos/Budget_Manager/2026-03-03%2020-43-15.mkv" type="video/x-matroska" />
+    Your browser does not support HTML5 video playback.
+  </video>
+  <p class="media-note">If the video does not play in-browser: <a href="../assets/videos/Budget_Manager/2026-03-03%2020-43-15.mkv" target="_blank" rel="noopener noreferrer">open video file</a></p>
+</section>
+<hr />
 <h2>🔐 Source Code</h2>
 <p>Public showcase repository available. Full structured version available upon professional request.</p>
-<p>📧 <a href="mailto:dominique.joguin@outlook.com">dominique.joguin@outlook.com</a></p>
+<div class="code-access-row">
+  <p class="code-access-email">📧 <a href="mailto:dominique.joguin@outlook.com">dominique.joguin@outlook.com</a></p>
+  <a class="code-access-github" href="https://github.com/CSIDJ" target="_blank" rel="noopener noreferrer" aria-label="Open GitHub profile">
+    <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+      <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.65 7.65 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"></path>
+    </svg>
+  </a>
+</div>
     </article>
     </main>
   </div>
@@ -137,9 +204,10 @@
   <footer class="project-footer">
     <div class="project-shell">
       <span class="footer-left">© Dominique Joguin 2026</span>
-      <span class="footer-right">ver.21-02_12-15</span>
+      <span class="footer-right">ver.03-03_21-23</span>
     </div>
   </footer>
   <script src="../assets/js/project-nav.js"></script>
+  <script src="../assets/js/use-case-media.js"></script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>🎬 Outil d’Automatisation Vidéo — Workflow IA Structuré — Portfolio 2026</title>
+  <title>🎬 Videos finder (V1) — Portfolio 2026</title>
   <link rel="stylesheet" href="../assets/css/project-pages.css" />
 </head>
 <body>
@@ -11,7 +11,7 @@
     <div class="project-shell">
       <div class="project-brand">
         <h1 class="project-name">Dominique Joguin</h1>
-        <p class="project-tagline">Directeur de Programme augmente par l'IA | Architecte Produit & Gouvernance</p>
+        <p class="project-tagline">Chef de Projet Digital AMOA | IA, Data, Automatisation</p>
       </div>
     </div>
   </header>
@@ -29,13 +29,16 @@
           <div class="uc-menu">
             <span class="uc-toggle"><a class="uc-parent-link" href="../case-studies-fr.html">📚 Études de cas</a></span>
             <ul class="uc-list">
-              <li><a href="./saas-platform-fr.html">🚀 Plateforme SaaS</a></li>
+              <li><a href="./saas-platform-fr.html">🚀 Plateforme SaaS PM² Multi-Tenant</a></li>
               <li><a href="./budget-manager-fr.html">📊 Budget Manager</a></li>
-              <li><a href="./video-scanner-fr.html" aria-current="page">🎬 Outil Vidéo</a></li>
-              <li><a href="./copilot-pilot-iteration-fr.html">🧪 Itération pilote IA (GitHub Copilot)</a></li>
+              <li><a href="./video-scanner-fr.html" aria-current="page">🎬 Videos finder</a></li>
+              <li><a href="./copilot-pilot-iteration-fr.html">🧪 Tetris via GitHub Copilot</a></li>
               <li><a href="./consortium-si-website-fr.html">🌐 Site institutionnel Consortium SI</a></li>
-              <li><a href="./ai-orchestration-framework-fr.html">🤖 Framework IA</a></li>
-            </ul>
+              <li><a href="./credit-manager-poc-fr.html">💳 POC Credit Manager</a></li>
+                          <li><a href="#" class="uc-coming-soon" data-soon-text="En cours de réalisation">🧩 Expérimentation Serveur MCP</a></li>
+              <li><a href="#" class="uc-coming-soon" data-soon-text="En cours de réalisation">🤖 Agent via LangChain (Scrimba)</a></li>
+            <li><a href="./ai-orchestration-framework-fr.html">🤖 Framework IA</a></li>
+              </ul>
           </div>
           <a href="../cv-fr.html">📄 CV</a>
           <a href="../dossier-fr.html">🧾 DCS</a>
@@ -46,74 +49,108 @@
       </nav>
     </aside>
     <main class="page-content">
-      <article>
-<h1>🎬 Outil d’Automatisation Vidéo — Workflow IA Structuré</h1>
-<h2>🎯 Objectif</h2>
-<p>Concevoir un outil structuré d’automatisation pour l’analyse vidéo et l’extraction de métadonnées, intégrant des workflows assistés par IA dans un environnement d’exécution contrôlé.</p>
+      <article class="use-case-article">
+<h1>🎬 Videos finder (V1)</h1>
+<h2>🎯 Contexte &amp; enjeu</h2>
+<p>Ce cas d’usage illustre une démarche AMOA appliquée à un processus opérationnel pouvant être automatisé : ingestion de contenus, extraction d’informations et restitution exploitable.</p>
+<p>L’objectif est de démontrer comment passer d’une idée d’automatisation à un POC cadré, testé et prêt à intégrer un SI existant.</p>
 <hr />
-<h2>🏗 Vue d’Architecture</h2>
-<p><strong>Composants principaux :</strong></p>
-<ul>
-<li>Couche d’exécution Python</li>
-<li>Interface GUI (basée sur Tkinter)</li>
-<li>Validation structurée des entrées/sorties</li>
-<li>Logique de traitement modulaire</li>
-</ul>
-<p><strong>Workflow :</strong></p>
-<ol>
-<li>Ingestion vidéo</li>
-<li>Extraction de métadonnées</li>
-<li>Validation structurée</li>
-<li>Reporting automatisé</li>
-<li>Export &amp; journalisation</li>
-</ol>
+<div class="section-head-row">
+  <h2>🖼 Captures d'écran</h2>
+</div>
+<div class="use-case-media use-case-media--slider-only">
+  <section class="demo-shot-block">
+    <h3>Captures d'écran (slider)</h3>
+    <p class="media-status-pill">En cours de réalisation</p>
+  </section>
+</div>
 <hr />
-<h2>🧠 Défis Techniques</h2>
+<h2>🧪 Positionnement original du use case</h2>
+<p>Ce projet a été volontairement conservé dans une complexité limitée pour éprouver toute la chaîne de gestion de projet sur un cas concret, du besoin initial jusqu’au retour d’expérience.</p>
 <ul>
-<li>Gestion des dépendances locales</li>
-<li>Stabilisation de l’interface GUI sous Linux</li>
-<li>Gestion des modules système manquants (ex : tkinter)</li>
-<li>Structuration robuste de la gestion d’erreurs</li>
+<li>Attribution de rôles IA (cadrage, implémentation, revue, QA)</li>
+<li>Tests multi-outils: GPTs OpenAI, Projects Perplexity, Gemini CLI, Claude, Roo Code, OpenRouter, Bolt.new</li>
+<li>Custom instructions ajustées en continu selon anomalies et performances observées</li>
 </ul>
+<p>Dans ce use case, les rôles projet sont assurés par des agents IA préconfigurés, pas par une équipe humaine opérationnelle.</p>
 <hr />
-<h2>🤖 Debug Orchestré par l’IA</h2>
-<p><strong>Le projet s’est fortement appuyé sur l’assistance IA pour :</strong></p>
+<h2>🏗 Ancrage technique (version originale)</h2>
 <ul>
-<li>Diagnostic des dépendances</li>
-<li>Stratégie d’isolation environnementale</li>
-<li>Debug progressif</li>
-<li>Simulation d’exceptions</li>
-<li>Refactoring du code</li>
-</ul>
-<p><strong>L’IA a agi comme :</strong></p>
-<ul>
-<li>Relecteur technique</li>
-<li>Assistant de debug</li>
-<li>Générateur de documentation</li>
-<li>Conseiller environnemental</li>
+<li>Workflow Python modulaire: ingestion, extraction, validation, export</li>
+<li>Interface GUI, gestion d’erreurs et journalisation pour exploitation</li>
+<li>Diagnostic dépendances/environnement et stabilisation Linux</li>
+<li>Démarche de recette sur scénarios nominal, dégradé et cas limites</li>
 </ul>
 <hr />
-<h2>🛠 Compatibilité Linux</h2>
-<p><strong>Validé sur environnement Fedora :</strong></p>
+<h2>👤 Rôle AMOA / Chef de Projet Digital</h2>
 <ul>
-<li>Isolation via environnement virtuel</li>
-<li>Installation contrôlée des dépendances système</li>
-<li>Exécution maîtrisée</li>
-<li>Correction des erreurs via analyse de traces</li>
+<li>Identification d’un processus métier éligible à l’automatisation</li>
+<li>Définition du périmètre fonctionnel et des règles de traitement</li>
+<li>Coordination entre logique métier, faisabilité technique et qualité attendue</li>
+<li>Préparation de la recette et des critères d’acceptation</li>
 </ul>
 <hr />
-<h2>📈 Ce que cela démontre</h2>
+<h2>🧩 Démarche projet</h2>
+<h3>1. Idéation et cadrage du cas d’usage IA</h3>
 <ul>
-<li>Application concrète d’outils IA</li>
-<li>Méthodologie de debug structurée</li>
-<li>Approche orientée automatisation</li>
-<li>Discipline d’exécution</li>
-<li>Expérimentation orientée livraison</li>
+<li>Qualification des gains attendus (temps, fiabilité, traçabilité)</li>
+<li>Définition d’indicateurs de valeur pour le POC</li>
+<li>Analyse des risques (données, robustesse, exploitabilité)</li>
 </ul>
+<h3>2. Conception et réalisation</h3>
+<ul>
+<li>Workflow modulaire : ingestion, extraction, validation, export</li>
+<li>Structuration des erreurs et journalisation pour faciliter l’exploitation</li>
+<li>Préparation d’une intégration progressive dans une chaîne plus large</li>
+</ul>
+<h3>3. Recette fonctionnelle (QA)</h3>
+<ul>
+<li>Jeux de tests sur scénarios nominal, dégradé et cas limites</li>
+<li>Suivi des anomalies et corrections par priorité métier</li>
+<li>Validation de conformité des sorties par rapport aux besoins utilisateurs</li>
+</ul>
+<hr />
+<h2>🤖 IA, automatisation et industrialisation</h2>
+<ul>
+<li>Usage de l’IA pour accélérer les itérations de conception et de diagnostic</li>
+<li>Approche reproductible pour lancer d’autres POC métiers</li>
+<li>Base de travail compatible avec des orchestrations NoCode/LowCode futures</li>
+</ul>
+<hr />
+<h2>📈 Livrables et résultats</h2>
+<ul>
+<li>POC fonctionnel avec parcours de traitement clair</li>
+<li>Plan de tests, incidents et décisions documentés</li>
+<li>Cadre d’évaluation valeur/risque pour une mise à l’échelle</li>
+<li>Capitalisation réutilisable pour d’autres processus automatisables</li>
+</ul>
+<hr />
+<h2>✅ Compétences démontrées pour le poste</h2>
+<ul>
+<li>Capacité à cadrer des cas d’usage IA concrets orientés métier</li>
+<li>Mise en place d’une recette fonctionnelle robuste</li>
+<li>Vision transverse entre besoin utilisateur et contraintes techniques</li>
+<li>Pilotage de l’amélioration continue par cycles courts</li>
+</ul>
+<hr />
+<div class="section-head-row">
+  <h2>🎬 Démo vidéo</h2>
+</div>
+<section class="demo-video-block demo-video-block--bottom">
+  <h3>Vidéo courte (boucle)</h3>
+  <p class="media-status-pill">En cours de réalisation</p>
+</section>
 <hr />
 <h2>🔐 Accès au code</h2>
-<p>Le dépôt vitrine public est disponible. La version structurée complète est accessible sur demande professionnelle.</p>
-<p>📧 <a href="mailto:dominique.joguin@outlook.com">dominique.joguin@outlook.com</a></p>
+<p>Les POC et MVP associés à ce use case sont démontrables sur demande, avec présentation du fonctionnement concret (parcours, logique, livrables et critères de validation).</p>
+<div class="code-access-row">
+  <p class="code-access-email">📧 <a href="mailto:dominique.joguin@outlook.com">dominique.joguin@outlook.com</a></p>
+  <a class="code-access-github" href="https://github.com/CSIDJ" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir le profil GitHub">
+    <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+      <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.65 7.65 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"></path>
+    </svg>
+  </a>
+</div>
     </article>
     </main>
   </div>
@@ -121,9 +158,10 @@
   <footer class="project-footer">
     <div class="project-shell">
       <span class="footer-left">© Dominique Joguin 2026</span>
-      <span class="footer-right">ver.21-02_12-15</span>
+      <span class="footer-right">ver.03-03_21-23</span>
     </div>
   </footer>
   <script src="../assets/js/project-nav.js"></script>
+  <script src="../assets/js/use-case-media.js"></script>
 </body>
 </html>
