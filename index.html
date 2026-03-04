@@ -152,15 +152,25 @@ h1{
 .enter-label.is-note{
   flex-direction:column;
   gap:12px;
+  justify-content:flex-start;
 }
 
 .enter-note-line{
   display:block;
+  width:100%;
+  text-align:center;
 }
 
 .enter-note-lead{
   color:#f87171;
   font-weight:700;
+}
+
+.enter-note-cta{
+  color:#f87171;
+  font-weight:700;
+  margin-top:auto;
+  margin-bottom:6px;
 }
 
 /* Mobile / touch (pas de hover) : texte visible en permanence */
@@ -356,7 +366,7 @@ footer{
 <footer>
   <div class="footer-row">
     <span>© Dominique Joguin 2026</span>
-    <span>ver.03-03_21-23</span>
+    <span>ver.03-04_10-12</span>
   </div>
 </footer>
 
@@ -394,6 +404,7 @@ const t=isFR
   enter_portfolio:"Entrer dans le portfolio",
   home_note_line_1:"Le design de ce portfolio est volontairement basique.",
   home_note_line_2:"L'objectif principal est d'exposer le travail et les compétences en gestion de projet, ainsi que les expérimentations autour des LLM.",
+  home_note_cta:"Cliquer pour entrer",
   footer_name:"Dominique Joguin"
 }
 :{
@@ -405,6 +416,7 @@ const t=isFR
   enter_portfolio:"Enter portfolio",
   home_note_line_1:"This portfolio intentionally uses a basic design.",
   home_note_line_2:"The primary goal is to showcase project management work and skills, as well as experimentation around LLMs.",
+  home_note_cta:"Click to enter",
   footer_name:"Dominique Joguin"
 };
 
@@ -444,7 +456,7 @@ if(portfolioLink){
     portfolioLink.classList.add("is-entering");
     if(enterLabel){
       enterLabel.classList.add("is-note");
-      enterLabel.innerHTML='<span class="enter-note-line enter-note-lead">'+t.home_note_line_1+'</span><span class="enter-note-line">'+t.home_note_line_2+'</span>';
+      enterLabel.innerHTML='<span class="enter-note-line enter-note-lead">'+t.home_note_line_1+'</span><span class="enter-note-line">'+t.home_note_line_2+'</span><span class="enter-note-line enter-note-cta">'+t.home_note_cta+'</span>';
     }
     portfolioRedirectTimer=window.setTimeout(function(){
       window.location.href=profilePath;
