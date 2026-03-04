@@ -12,7 +12,13 @@ local-private/
 private/
 secrets/
 notes-private/
-assets/videos/
+assets/videos/*
+!assets/videos/**/
+assets/videos/**/*.mkv
+assets/videos/**/*.wmv
+!assets/videos/**/*.mp4
+!assets/videos/**/*.webm
+!assets/videos/**/*.txt
 
 # Local internal notes / drafts (keep local)
 notes/
