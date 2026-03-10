@@ -55,7 +55,7 @@ body {
   margin: 0 auto;
   padding: 22px 20px 56px;
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: 320px 1fr;
   gap: 24px;
   align-items: start;
   border-top: 1px solid var(--line);
@@ -92,7 +92,9 @@ body {
   font-size: 14px;
   text-decoration: none;
   color: var(--accent);
-  white-space: nowrap;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  line-height: 1.35;
 }
 
 .uc-toggle {
@@ -108,7 +110,7 @@ body {
 .uc-list {
   list-style: none;
   margin: 6px 0 0;
-  padding: 0 0 0 8px;
+  padding: 0 0 5px;
   display: none;
 }
 
@@ -116,9 +118,19 @@ body {
   display: block;
 }
 
+.uc-list li {
+  margin: 0;
+}
+
 .uc-list a {
   display: block;
-  padding: 6px 4px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px 10px;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  line-height: 1.35;
   border-radius: 6px;
 }
 
@@ -129,6 +141,7 @@ body {
 .uc-list a[aria-current="page"] {
   background: #e5e7eb;
   font-weight: 600;
+  overflow: hidden;
 }
 
 .uc-toggle {
